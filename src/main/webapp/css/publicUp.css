@@ -1,0 +1,190 @@
+/*工具样式 */
+.right{
+    float: right !important;
+}
+.width-90{
+	width: 90%;
+}
+/* 工具样式结束 */
+
+body{
+	width: 940px;
+	/*height: 633px;*/
+	margin: 0 auto;
+	/*border: 2px solid #eee;*/
+	font-family: "微软雅黑";
+	overflow-y: auto;
+}
+header{
+	height: 30px;
+	text-align: center;
+	background-color: #F8F6F3;
+	color: #3C3032;
+}
+h1{
+	font-size: 16px;
+    line-height: 30px;      
+}
+h3{
+	display: inline-block;
+	font-size: 16px;
+	width: 32px;
+	background-color: #D7D7D7;
+	color: #3C3032;
+	border: 1px solid #D7D7D7;
+	padding: 20px 6px;
+	border-radius: 5px;
+	position: absolute;
+	top: 50%;
+	margin-top: -55px;
+	font-weight: 500;
+}
+section{
+	position: relative;
+	padding: 20px;
+	border: 1px solid #686868;
+	background-color: ;
+}
+section+section{
+	border-top: none;
+}
+
+textarea{
+	font-size: 16px;
+}
+.span_advice{
+	display: inline-block;
+	padding: 10px;
+}
+.line-ver{
+	display: inline-block;
+	width: 1px;
+	background-color: #eee;
+	height: 100px;
+
+}
+.form-inline input.form-control{
+	height: 26px;
+	font-size: 12px;
+	
+}
+
+.add_btn{
+	padding: 3px 5px;
+	background-color: #D7D7D7;
+	color: #3C3032;
+	border: 1px solid #D7D7D7;
+	border-radius: 5px;
+	margin-left: 10px;
+	margin-bottom: 3px;
+}
+a:link,a:hover,a:visited,a:active{
+	text-decoration: none;
+	color: #3C3032;
+}
+.tag_select{
+	padding: 3px 6px;
+	/*background-color: black;*/
+	border: 1px solid #ccc;
+	color: #3C3032;;
+	cursor: pointer;
+	border-radius: 5px;
+	margin: 2px;
+	transition: .2s ease-out;
+}
+.comple_input_tag,.comple_input_tag[readonly]{
+	border: none;
+	padding: 5px;
+	background-color: #D7D7D7;
+	color: #3C3032;
+	width: 30px;
+	margin: 2px;
+	text-align: center;
+	font-size: 14px;
+}
+.tagSelect_active{
+	padding: 3px 6px;
+	background-color: #D7D7D7;
+	color: #3C3032;;
+	cursor: pointer;
+	border-radius: 5px;
+	margin: 2px;
+	transition: .2s ease-out;
+	border: 1px solid #D7D7D7;
+}
+th{
+	background-color: #F5F6FA
+	color: #fff;
+}
+
+.img_upload{
+	min-height: 200px;
+}
+
+.img_upload div{
+	width: 90%;
+}
+
+.basedInfo_container div{
+	margin-bottom: 10px;
+}
+
+table.form-inline{
+	width: 90%;
+}
+
+table.form-inline input,table.form-inline input.form-control{
+	width: 90px;
+}
+
+/* 下一步部分 */
+.btn_pages{
+	
+	height: 50px;
+	text-align: center;
+	margin-top: 10px;
+}
+.btn_page{
+	
+	padding: 6px 10px;
+	height: 30px;
+	line-height: 6px;
+	margin: 10px;
+	box-sizing: border-box;
+	background-color: #D7D7D7;
+	color: #3C3032;
+	border: 1px solid #D7D7D7;
+	border-radius: 5px;
+	
+	cursor: pointer;
+
+
+}
+/* 下一步按钮结束 */
+
+/* footer */
+footer{
+	text-align: center;
+	height: 40px;
+}
+footer ._submit{
+	display: inline-block;
+	padding: 5px;
+	background-color: #D7D7D7;
+	color: #3C3032;
+	font-size: 12px;
+	border-radius: 5px;
+	margin: 5px;
+}
+/* footer结束 */
+
+.finace .caret{
+	float:right;
+	margin-top:10px;
+}
+.dropdown-menu li a:hover{
+	cursor:pointer;
+}
+.ticket-select{
+	min-width:300px;
+}

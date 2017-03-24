@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>客户管理</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/customer.css">
+</head>
+<body>
+	<div id="routeproduct-title">
+		<h1>客户管理</h1>
+	</div>
+
+	<div id="routeproduct">
+		<div class="routeproduct-top">
+			<form class="form-inline" role="form">
+				<div class="btn-group finace" role="group">
+				    <button type="button" class="btn btn-default finace-income">客户群组</button>
+				    <div class="btn-group" role="group">
+				        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:130px;">
+				       		<span class="customer-sort">全部</span><span class="caret"></span>
+					    </button>
+					    <ul class="dropdown-menu customer-income-state">
+					        <li><a>全部</a></li>
+					    </ul>
+					</div>
+				</div>
+				<button type="button" class="btn btn-primary customer-new customer-group">新建分组</button>
+				<div class="form-group finace" style="margin-left: 25px;">
+				    <div class="input-group routeproduct-time">
+				      	<div class="input-group-addon">客户姓名</div>
+				        <input class="form-control form-width form-control-time customer-id" placeholder="请输入客户姓名" type="text">
+				    </div>
+				</div>
+				<div class="form-group finace" style="margin-left: 25px;">
+				    <div class="input-group routeproduct-time">
+				      	<div class="input-group-addon">联系电话</div>
+				        <input class="form-control form-width form-control-time customer-phone" placeholder="请输入手机号码" type="text" style="margin-right:0px;">
+				    </div>
+				</div>
+				<!-- <button type="button" class="btn btn-primary customer-new customer-adduser">添加用户</button> -->
+				<button type="button" class="btn btn-primary finace-search">查询</button>
+			</form>
+		</div>
+		
+		<div id="finace-middle">
+			<div class="finace-select">
+				<input type="checkbox" class="finace-order-select" style="position: relative;top:2px;">&nbsp;&nbsp;选择全部
+			</div>
+			<p class="finace-order">共计有&nbsp;&nbsp;&nbsp;<span>120</span>&nbsp;&nbsp;&nbsp;个订单</p>
+			<button type="button" class="btn btn-primary finace-export">导出Excel结果</button>
+		</div>
+		
+		<table class="table table-hover table-routeproduct table-inquery" id="table" style="table-layout:fixed">
+			<caption>
+				<h3>查询结果</h3>
+			</caption>
+	      	<thead class="routeproduct-inquire-thead">
+		        <tr>
+		            <th class="finace-serial">序号</th>
+		            <th class="finace-num">客户ID</th>
+		            <th class="finace-username">客户名称</th>
+		            <th class="finace-tellphone">联系电话</th>
+		            <th class="finace-fenzu">客户群组</th>
+		            <th class="finace-account">订单数</th>
+		            <th class="finace-money">消费金额</th>
+		            <th class="finace-order-total">客户订单</th>
+		            <th class="finace-out-detail">操作</th>
+		        </tr>
+		    </thead>
+
+		    <tbody>
+				<!-- <tr><td style="width:100%;text-align: center;display: inline-block;line-height: 30px;">暂无结果</td></tr> -->
+		        <tr>
+		          	<td class="finace-serial arial-sans"><label class="finace-xuhao"><input type="checkbox" class="finace-xh-select">&nbsp;001</label></td>
+		         	<td class="finace-num arial-sans">120120001001</td>
+		         	<td class="finace-username">欧阳少华</td>
+		          	<td class="finace-tellphone arial-sans">1586445215</td>
+		          	<td class="finace-fenzu">周边游客户群组</td>
+		          	<td class="finace-account">10</td>
+		          	<td class="finace-money">12345元</td>
+		          	<td class="finace-order-total"><button type="button" class="btn btn-primary">查看</button></td>
+		          	<td class="finace-out-detail">
+		          		<div class="btn-group" role="group">
+		        					        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:100px;">
+		        					       		<span class="customer-order-state-click">操作</span><span class="caret"></span>
+		        						    </button>
+		        						    <ul class="dropdown-menu customer-order-state" style="min-width:80px;">
+		        						        <li><a>操作</a></li>
+		        						        <li><a>客户分组</a></li>
+		        						        <li><a>移动分组</a></li>
+		        						        <li><a>删除客户</a></li>
+		        						    </ul>
+		        						</div>
+		          	</td>
+		        </tr>
+	      	</tbody>
+	    </table>
+    </div>
+	
+	
+	
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>	
+	<script type="text/javascript" src="js/public.js"></script>
+	<script type="text/javascript" src="js/validate.js"></script>
+	<script type="text/javascript" src="js/customer.js"></script>
+</body>
+</html>

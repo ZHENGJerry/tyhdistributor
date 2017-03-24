@@ -1,0 +1,285 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	font-family:'hiragino sans gb','PingFangSC-Medium','微软雅黑';
+	font-size: 14px;
+}
+input{
+	text-indent: 2px;
+}
+#main-wrap{
+	width: 940px;
+	margin: 0 auto;
+	background: #f6f6f6;
+	text-align: center;
+	position: relative;
+}
+#main-wrap h5{
+	font-size: 16px;
+	font-weight:500;
+	padding: 5px;
+}
+.main-menu{
+	border-top: 1px solid #797979;
+	border-bottom: 1px solid #797979;
+}
+.main-menu:after{
+	display: block;
+	clear: both;
+	content: "";
+}
+.main-menu li{
+	float: left;
+	padding: 20px 40px;
+	cursor: pointer;
+}
+.select{
+	color: #169bd5;
+}
+#detail-wrap:after,.add-staff ul:after{
+	display: block;
+	clear: both;
+	content: "";
+}
+#detail-wrap>div{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+}
+.left-head{
+	padding: 10px 0;
+	background: #f2f2f2;
+}
+
+/*左边部分样式开始*/
+.detail-left{
+	width: 260px;
+	text-align: center;
+	border-right: 1px solid #797979;
+}
+.detail-left li{
+	padding: 10px 0;
+}
+.add-bm{
+	width: 259px;
+    position: relative;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+.add-select{
+	background: #ddd;
+}
+.add-bm-name{
+	width: 300px;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.add-bm-info{
+	width: 300px;
+	height: 40px;
+	padding: 0 10px;
+}
+span[class^="add-bm-"]{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	position: absolute;
+	text-indent:-9999px;
+	top: 10px;
+	cursor: pointer;
+	background-image: url(../img/btn.png)
+}
+.add-bm-ok{
+	right: 40px;
+	background-position: 0 0;
+}
+.add-bm-del{
+	right: 10px;
+	background-position: 20px 0;
+}
+.bm-list li{
+	position: relative;
+}
+.bm-list li span{
+	display: inline-block;
+	width: 20px;
+	height: 30px;
+	background-image: url(../img/del.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	display: none;
+}
+.bm-detail{
+	height:43px;
+	line-height: 43px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow:hidden;
+}
+.span-del-bm{
+	width: 80px;
+	position: absolute;
+	right: -10px;
+	top: 28px;
+	z-index: 2;
+}
+.delete-staff{
+	cursor:pointer;
+}
+/*左边部分样式结束*/
+
+/*右边部分样式开始*/
+.detail-right{
+	width: 680px;
+	float: left;
+	text-align: left;
+}
+.right-head{
+	padding: 10px;
+	background: #f2f2f2;
+}
+.detail-right-bottom ul{
+	padding: 0 10px;
+}
+.detail-right-bottom ul li{
+	padding: 10px 0;
+	border-bottom: 1px solid #797979;
+	position: relative;
+}
+.detail-right-bottom li span{
+	display: inline-block;
+	text-align:center;
+}
+.s-info-selt{
+	border: 1px solid #797979;
+	background: transparent;
+	width: 14px;
+	height: 14px;
+	margin: 0 10px;
+}
+.s-info-name{
+	width: 80px;
+}
+.s-info-num{
+	width: 30px;
+}
+.s-info-email{
+	width:110px;
+}
+.s-info-tel{
+	width:170px;
+}
+.s-info-btn{
+	position: absolute;
+	right: 0;
+	bottom: 5px;
+	width:120px;
+}
+.s-info-job{
+	width:120px;
+}
+.s-info-btn input{
+	color: #fff;
+	background: #169bd5;
+	width: 60px;
+	height: 30px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.s-info-btn input[disabled]{
+	background: #2ab3ef;
+}
+.detail-right-bottom .bn-xg{
+	min-width: 110px;
+	padding:0 0 10px 0;
+}
+.detail-right-bottom .caret{
+	float: right;
+    margin-top: 10px;
+}
+.detail-right-bottom .bn-xg li{
+	border: none;
+    height: 30px;
+    cursor: pointer;
+}
+/*右边部分样式结束*/
+
+/*添加员工的弹出框的样式*/
+.add-staff{
+	position: absolute;
+	border: 1px solid #797979;
+	width: 600px;
+	margin: 0 auto;
+	right: 169px;
+	z-index: 10;
+	background: #fff;
+}
+.add-staff ul{
+	text-align: center;
+	padding-bottom: 20px;
+}
+.add-staff>p{
+	border-bottom: 5px solid #169bd5;
+	padding: 10px;
+}
+.add-staff li{
+	float: left;
+	padding-top: 10px;
+	margin: 0 10px;
+}
+.add-staff li span{
+	display: inline-block;
+}
+.add-staff li span:nth-of-type(1){
+	width: 80px;
+	text-align: center;
+}
+.add-staff li input,.add-staff li select{
+	width: 180px;
+	height: 36px;
+	padding-left: 5px;
+}
+.add-staff li select{
+	width: 189px;
+}
+.del-staff li input,.del-staff li select{
+	border: none;
+	outline: none;
+}
+.change-staff li input{
+	border: none;
+	outline: none;
+}
+.add-staff-btn{
+	border-top: 1px dashed #797979;
+	margin: 0 10px;
+	padding: 26px 0;
+}
+.add-staff-btn input{
+	width: 90px;
+	height: 40px;
+	color: #fff;
+	background: #169bd5;
+	margin: 0 15px;
+	border: none;
+	border-radius: 5px;
+	cursor:pointer;
+}
+.detail-right-bottom .bnChange{
+	width:80px;
+}
+.bmValidate{
+	color: red;
+    position: absolute;
+    top: 10px;
+    right: -190px;
+}

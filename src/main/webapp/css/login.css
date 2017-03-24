@@ -1,0 +1,497 @@
+@charset "utf-8";
+
+body{
+	font-size:14px;
+	font-family:'hiragino sans gb';
+}
+.info-color-red{
+    color:red;
+}
+.btn-default{
+	padding:2px 6px;
+    color:#b39898;
+    font-family: 'PingFangSC Regular';
+    background: #e6e6e7;
+}
+.btn:visited,.btn:hover,.btn:active,.btn:focus{
+	outline-color:transparent;
+    color:#b39898;
+    font-family: 'PingFangSC Regular';
+}
+/*城市地点css*/
+#select-city{
+    text-align:center;
+    height:140px;
+    line-height:140px;
+}
+#select-city .form-group{
+    margin: 0 10px 0 10px;
+}
+#login-main input{
+    width: 235px;
+    height: 36px;
+    letter-spacing: 0.8px;
+}
+#reg-login{
+    margin:0 auto;
+    width:1440px;
+    background: #fff url('../img/bg.png') no-repeat;
+}
+#login-main{
+	width:1200px;
+	height:750px;
+	margin:0 auto;
+	position: relative;
+}
+#login-main h1{
+	position: absolute;
+	top:215px;
+	left:232px;
+	width:229px;
+	height:265px;
+	background: url('../img/logo1.png') no-repeat;
+	text-indent:-9999px;
+}
+#login-main h2{
+	position: absolute;
+	top: 444px;
+    left: 140px;
+	width:333px;
+	height:100px;
+	background: url('../img/tongyonghui.png') no-repeat;
+	text-indent:-9999px;
+}
+#login-main .reg-login-text{
+	position: absolute;
+    top: 554px;
+    left: 164px;
+    width: 300px;
+    height: 25px;
+    background: url(../img/business.png) no-repeat;
+    text-indent: -9999px;
+}
+/*登录/注册背景*/
+#login-main .login-main-right{
+	width:396px;
+	position: absolute;
+	top: 125px;
+    left: 672px;
+}
+#login-main .login-log{
+    height:457px;
+    background: url('../img/num-bg.png') no-repeat;
+}
+#login-main .login-input{
+	background: #e6e6e7;
+    border: 0;
+}
+#login-main input:focus{
+	outline-color:#29bfd2;
+}
+#login-main .login-main-right .login-username{
+    position: absolute;
+    top: 163px;
+    left: 90px;
+}
+#login-main .login-main-right .login-password{
+    position: absolute;
+    top: 223px;
+    left: 90px;
+}
+#login-main .login-main-right .login-password-show{
+    position: absolute;
+    top: 230px;
+    left: 290px;
+    width:25px;
+    height:25px;
+    background: url('../img/pass_open.png') no-repeat center center;
+    text-indent:-9999px;
+}
+#login-main .login-main-right .login-validate-num{
+	width: 170px;
+    height: 36px;
+    position: absolute;
+    top: 283px;
+    left: 60px;
+    text-indent: 10px;
+    letter-spacing: 0.8px;
+}
+#login-main .login-main-right .login-main-cellphone{
+	position: absolute;
+    top: 284px;
+    right: 60px;
+    width: 85px;
+    height: 35px;
+    background: #e6e6e7;
+}
+#login-main .login-main-right .login-main-reg{
+	position: absolute;
+    top: 334px;
+    left: 50px;
+    width: 85px;
+    height: 30px;
+    background: #e6e6e7;
+}
+#login-main .login-main-right .login-main-forgetnum{
+	position: absolute;
+    top: 334px;
+    right: 50px;
+    width: 85px;
+    height: 30px;
+    background: #e6e6e7;
+}
+#login-main .login-main-right .login-main-log{
+	position: absolute;
+    top: 369px;
+    border-radius: 4px;
+    right: 40px;
+    width: 318px;
+    height: 62px;
+    border: 0;
+    background: url(../img/base.png) no-repeat;
+    color:#fff;
+    font-size:20px;
+    font-family: '微软雅黑';
+}
+#login-main .company-info{
+    color:#fff;
+    font-size:15px;
+    font-family: '微软雅黑';
+    opacity: 0.9;
+    filter:alapha(opacity=60);
+    position:absolute;
+    bottom:40px;
+    left:298px;
+}
+
+
+/*注册界面*/
+#login-main .login-reg{
+    height:600px;
+    background: url('../img/bg1.png') no-repeat;
+    position: relative;
+}
+#login-main .regist{
+    width: 315px;
+    height: 300px;
+    position: absolute;
+    top: 152px;
+    left: 40px;
+}
+/*input文字左对齐*/
+#login-main .regist .control-label{
+    text-align:left;
+    line-height: 36px;
+    padding-top:0;
+}
+#login-main .login-reg-interfance input{
+    text-indent:0px;
+    border:1px solid #ccc;
+}
+#login-main .regist .form-group{
+    margin:20px 0 0 0;
+}
+#login-main .login-reg-interfance .reg-icon{
+    display:inline-block;
+    margin:0 10px 0 0;
+    width: 30px;
+    height:36px;
+    text-indent:-9999px;
+}
+#login-main .regist .reg-username-info .reg-icon-num,
+#login-main .regist .reg-validate-info .reg-icon-num{
+    background: url(../img/cellphone.png) no-repeat center center;
+}
+#login-main .regist .reg-username-info .reg-icon-num{
+    background: url(../img/username.png) no-repeat center center;
+}
+#login-main .regist .reg-password-info .reg-icon-num{
+    background: url(../img/password.png) no-repeat center center;
+}
+#login-main .regist .reg-password-info .reg-password-show{
+    width:25px;
+    height:25px;
+    background:url('../img/pass_open.png') no-repeat center center;
+    position: absolute;
+    top:80px;
+    right:35px;
+    text-indent:-9999px;
+}
+#login-main .regist .reg-email-info .reg-icon-num{
+    background: url(../img/email.png) no-repeat center center;
+}
+#login-main .regist .reg-validate-num{
+    width:120px;
+ }
+ #login-main .regist .reg-validate-info{
+    position:relative;
+ }
+#login-main .regist .reg-validate-info .form-group{
+    margin:0;
+    padding-left:10px;
+}
+#login-main .regist .reg-main-cellphone{
+    position: absolute;
+    top: 5px;
+    right: 38px;
+}
+#login-main  .per-info{
+    position: absolute;
+    bottom:120px;
+    left:39px;
+    height:60px;
+}
+#login-main .per-info .hori-top{
+    display: inline-block;
+    height:2px;
+    width:315px;
+    text-indent:-9999px;
+    background: url('../img/copy.png') no-repeat;
+}
+#login-main .per-info p{
+    position: absolute;
+    top:2px;
+    left:52px;
+    font-size:13px;
+    color:#b59292;
+}
+#login-main .per-info .info-company{
+    position: absolute;
+    top: 30px;
+    left: 55px;
+}
+#login-main .per-info .info-person{
+    position:absolute;
+    top:30px;
+    left:180px;
+}
+#login-main  .per-info-or{
+    position:absolute;
+    top:30px;
+    left:140px;
+    width:25px;
+    height:25px;
+    line-height: 25px;
+    text-align:center;
+    background: #d6d8da;
+    border-radius:25px; 
+}
+
+/*企业注册界面*/
+/*第一页*/
+#login-main  .reg-interface input{
+    height:30px;
+}
+#login-main .reg-interface label{
+    line-height:30px;
+    height:30px;
+}
+#login-main .reg-interface .reg-icon{
+    display:inline-block;
+    margin:0 0 0 0;
+    width: 30px;
+    height:30px;
+    text-indent:-9999px;
+}
+#login-main .reg-interface .regist-company-name .icon-company-name{
+    background: url('../img/companyname.png') no-repeat center 2px;
+}
+#login-main .reg-interface .address .icon-address{
+    background: url('../img/address.png') no-repeat center 0;
+}
+#login-main .reg-interface .detail-address .icon-detail-address{
+    background: url('../img/office.png') no-repeat center 2px;
+}
+#login-main .reg-interface .phone .icon-phone{
+    background: url('../img/phone.png') no-repeat center 2px;
+}
+#login-main .reg-interface .cellphone .icon-cellphone{
+    background: url('../img/cellphone.png') no-repeat center 2px;
+}
+#login-main .reg-interface .administrator-name .icon-administrator-name{
+    background: url('../img/administraotr.png') no-repeat center 2px;
+}
+#login-main .reg-interface .administrator-phone .icon-administrator-phone{
+    background: url('../img/cellphone.png') no-repeat center 2px;
+}
+#login-main .reg-interface .company-address-nationwide,
+#login-main .reg-interface .distributor-address-nationwide
+{
+    margin:0 0 0 10px;
+    width:100px;
+}
+#login-main .reg-interface .company-address-county,
+ #login-main .reg-interface .distributor-address-county
+{
+    margin:0 0 0 20px;
+    width:100px;
+}
+#login-main .reg-interface .form-group{
+    margin-top:15px;
+}
+#login-main .login-reg .reg-compay-btn{
+    position: absolute;
+    bottom: 80px;
+    left: 160px;
+}
+
+
+/*企业注册第二页*/
+#login-main .reg-interface .bank .icon-bank{
+    background: url('../img/bankuser.png') no-repeat center center;
+}
+#login-main .reg-interface .bankcard .icon-bankcard{
+    background: url('../img/banknum.png') no-repeat center 2px;
+}
+#login-main .reg-interface .bankcard-name .icon-bankcard-name{
+    background: url('../img/bank.png') no-repeat center 2px;
+}
+#login-main .reg-interface .alipay .icon-alipay{
+    background: url('../img/appliy.png') no-repeat center 2px;
+}
+#login-main .reg-interface .receive-message .icon-receive-message{
+    background: url('../img/cellphone.png') no-repeat center 2px;
+}
+#login-main .reg-interface .page2{
+    position:relative;
+}
+#login-main .reg-interface .select-company{
+    position: absolute;
+    top: 250px;
+    left: -2px;
+}
+#login-main .reg-interface .select-company p{
+    position: absolute;
+    top:2px;
+    left:61px;
+    font-size:13px;
+    color:#b59292;
+}
+#login-main .reg-interface .per-info-line{
+    width:2px;
+    height: 10px;
+    background: #929292;
+    position: absolute;
+    top: 16px;
+    left: 158px;
+}
+#login-main .reg-interface .per-info-or{
+    position:absolute;
+    top:30px;
+    left:147px;
+    width:25px;
+    height:25px;
+    line-height: 25px;
+    text-align:center;
+    background: #d6d8da;
+    border-radius:25px; 
+}
+#login-main .reg-interface .support-indentify-info{
+    font-size:12px;
+}
+#login-main .reg-interface .register{
+    position: absolute;
+    top: 320px;
+    left: -2px;
+}
+
+/*分销商注册*/
+#login-main .distributor .form-group{
+    margin-top:10px;
+}
+#login-main .distributor .select-company{
+    position:absolute;
+    top:268px;
+    left:-2px;
+}
+#login-main .distributor .register{
+    position: absolute;
+    top: 335px;
+    left: -2px;
+}
+
+/*导游注册*/
+#login-main .distributor .card input{
+    width:15px;
+    height:23px;
+}
+#login-main .distributor .card{
+    border:1px solid #ccc;
+    margin:10px 0 0 5px;
+    width:300px;
+    height:79px;
+}
+#login-main .distributor .card .idCard{
+    margin-top:10px;
+    width:79px;
+    height:55px;
+    line-height:55px;
+    text-align:center;
+    float:left;
+    border-right:1px solid #ccc;
+}
+#login-main .distributor .card .IDcard{
+    width:200px;
+    height:80px;
+    text-align:center;
+    float:left;
+}
+#login-main .distributor-guide .card .radio-inline{
+    margin-left:0px;
+    padding-top:0;
+}
+#login-main .distributor-guide .pass-file{
+    width:300px;
+    height:78px;
+    border:1px solid #ccc;
+    margin:10px 0 0 5px;
+}
+/*#login-main .distributor-guide .pass-file .file-text
+    width:79px;
+    border-right:1px solid #ccc;
+    height:55px;
+    line-height:55px;
+    text-align:center;
+    float:left;
+    margin-top:10px;
+}*/
+#login-main .distributor-guide .pass-file .pass-file-img
+{
+    width:75px;
+    height:55px;
+    line-height:55px;
+    text-align:center;
+    margin-left:10px;
+    float:left;
+    background: url('../img/jiahao.jpg') no-repeat;
+    text-indent:-9999px;
+    margin-top:10px;
+    border:1px solid #ccc;
+    display: block;
+}
+#login-main .distributor-guide .pass-file .img_container{
+    margin-left:10px;
+    float:left;
+    margin-top:10px;
+    display: block;
+}
+#login-main .distributor-guide .pass-file .file-tooltip{
+    width:120px;
+    height:55px;
+    margin:15px 0 0 5px;
+    text-align:center;
+    float:left;
+}
+#login-main .distributor-guide .file-text-tooltip{
+    margin:20px auto;
+    font-size:12px;
+    width:280px;
+    height:30px;
+}
+#login-main .distributor-guide .file-text-tooltip .color-pink{
+    color:red;
+}
+#login-main .distributor-guide .register-guide{
+    left: -4px;
+    top: 269px;
+}

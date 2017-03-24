@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"       
+	xmlns:p="http://www.springframework.org/schema/p"  
+	xmlns:context="http://www.springframework.org/schema/context"   
+	xmlns:tx="http://www.springframework.org/schema/tx"  
+	xmlns:aop="http://www.springframework.org/schema/aop"  
+	xsi:schemaLocation="http://www.springframework.org/schema/beans    
+	http://www.springframework.org/schema/beans/spring-beans.xsd    
+	http://www.springframework.org/schema/aop    
+	http://www.springframework.org/schema/aop/spring-aop.xsd    
+	http://www.springframework.org/schema/tx    
+	http://www.springframework.org/schema/tx/spring-tx.xsd    
+	http://www.springframework.org/schema/context    
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<description>Shiro的配置</description>
+	
+	<!-- SecurityManager配置 -->
+	<!-- 配置Realm域 -->
+	<!-- 密码比较器 -->
+	<!-- 安全管理 -->
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <!-- Single realm app.  If you have multiple realms, use the 'realms' property instead. -->
+        <property name="realm" ref="authRealm"/><!-- 引用自定义的realm -->
+    </bean>
+    <bean id="authRealm" class="cn.tongyouhui.control.controller.AuthRealm">
+		<property name="credentialsMatcher" ref="passwordMatcher"/>
+	</bean>
+	<bean id="passwordMatcher" class="cn.tongyouhui.control.controller.CustomCredentialsMatcher"/>
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager"/>
+        <property name="loginUrl" value="/login.html"></property>
+        <property name="filterChainDefinitions">
+            <value>
+				/css/** = anon
+				/img/** = anon
+				/js/** = anon
+				/login.html = anon
+				/register = anon
+				/userlogin = anon
+				/infoValidate = anon
+				/userValidate = anon
+				/infoValidateShow = anon
+				/login1 = anon
+				/getUrl = anon
+				/qnytoken = anon
+				/pathcs = anon
+				/** = authc
+				/*.* = authc
+            </value>
+        </property>
+    </bean>
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"
+          depends-on="lifecycleBeanPostProcessor">
+        <property name="proxyTargetClass" value="true"/>
+    </bean>
+    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+        <property name="securityManager" ref="securityManager"/>
+    </bean>
+</beans>

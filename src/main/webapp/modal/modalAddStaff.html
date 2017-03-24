@@ -1,0 +1,37 @@
+<!-- 员工添加 -->
+<div class="modal-dialog" role="document" style="z-index: 9999;">
+    <div class="modal-content" >
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" style="font-size:18px; text-align:center;" >添加员工</h4>
+      </div>
+      <div class="modal-body">
+      	<form class="form-inline customer-add">
+            <span>员工姓名</span><input type="text" class="form-control gap customer-username">
+            <span class="gap-front">登录密码</span><input type="password" class="form-control gap customer-tellphone"><img class="password-toggle" src="/tyhcontrol/img/pass_open.png" />
+            <br>
+            <span>联系电话</span><input type="text" class="form-control gap customer-danwei" maxlength="11">
+            <span class="gap-front">电子邮箱</span><input type="text" class="form-control gap customer-email">
+            <br>
+            <span>工&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</span><input type="text" class="form-control gap customer-user-sort">
+            <span style="margin-left: 30px;">所属部门</span>
+            <div class="btn-group" style="display: inline-block;margin-top:10px;">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 182px;margin-left: 15px;height: 34px;line-height: 34px;">
+                 <span class="bm-fw" style="position: initial;"></span><span class="caret" style="margin-top:7px;margin-right: 8px;float: right;"></span>
+              </button>
+              <ul class="dropdown-menu bmTotal">
+                <!-- <li><a>运营一部</a></li>
+                <li><a>运营二部</a></li> -->
+              </ul>
+            </div>
+            <br>
+            <span class="gap-front" style="margin-left:2px;">职位名称</span><input type="text" class="form-control gap customer-career">
+            <span class="staff-tip" style="display:none;color:red;margin-left:30px;"></span>
+        </form>
+      </div>
+      <div class="modal-footer" style="text-align: center;">
+        <button type="button" class="btn btn-primary customer-cacel" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary customer-sure">确定</button>
+      </div>
+    </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd
+http://code.alibabatech.com/schema/dubbo 
+http://code.alibabatech.com/schema/dubbo/dubbo.xsd 
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx.xsd
+http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc.xsd
+http://www.springframework.org/schema/util
+http://www.springframework.org/schema/util/spring-util.xsd">
+	<!-- 开启注解扫描 -->
+	<context:component-scan base-package="cn.tongyouhui.control"></context:component-scan>
+	<!-- 默认的注解映射的支持，org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping -->
+	<mvc:annotation-driven
+		content-negotiation-manager="contentNegotiationManager">
+		<mvc:message-converters register-defaults="true">
+			<!-- 将StringHttpMessageConverter的默认编码设为UTF-8 -->
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+				<constructor-arg value="UTF-8" />
+			</bean>
+			<!-- 将Jackson2HttpMessageConverter的默认格式化输出为true -->
+			<bean
+				class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+				<property name="prettyPrint" value="true" />
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+	<!-- REST中根据URL后缀自动判定Content-Type及相应的View -->
+	<bean id="contentNegotiationManager"
+		class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+		<property name="mediaTypes">
+			<map>
+				<entry key="xml" value="application/xml" />
+				<entry key="json" value="application/json" />
+			</map>
+		</property>
+		<property name="ignoreAcceptHeader" value="true" />
+		<property name="favorPathExtension" value="true" />
+	</bean>
+
+	<!-- 放行静态资源 -->
+	<mvc:default-servlet-handler />
+	<!-- 视图解析器 -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/"></property>
+		<property name="suffix" value=".html"></property>
+	</bean>
+	<!-- 设置图片上传 -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="10240000"></property>
+	</bean>
+	<!-- 启用shiro 注解 -->
+	<bean
+		class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"
+		depends-on="lifecycleBeanPostProcessor" />
+	<bean
+		class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+		<property name="securityManager" ref="securityManager" />
+	</bean>
+
+</beans>

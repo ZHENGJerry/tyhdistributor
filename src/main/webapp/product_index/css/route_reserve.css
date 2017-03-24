@@ -1,0 +1,77 @@
+.flow-container{
+	margin-top: -4px;
+	background: rgba(255,255,255,0.5);
+}
+.pro-info{
+	width: 70%;
+	margin: 0 auto;
+	border-left: 1px solid #2e3033;
+	border-right: 1px solid #2e3033;
+	background: rgba(255,255,255,0.8);
+}
+.pro-info-title h5{
+	text-align: center;
+	padding: 10px 0;
+	border-bottom: 2px solid #2e3033;
+	font-size: 18px;
+	font-weight: normal;
+}
+.pro-info-head{
+	padding: 10px;
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	border-bottom: 2px solid #2e3033;
+}
+.pro-info-date{
+	border-bottom: 2px solid #2e3033;
+}
+.devide-two{
+	padding: 0 10px;
+	border-bottom: 1px solid #2e3033;
+}
+.devide-two>span{
+	display: inline-block;
+	width: 49%;
+	box-sizing: border-box;
+	padding: 10px 0;
+}
+.devide-two>span:nth-of-type(2n){
+	border-left: 1px solid #2e3033;
+	padding-left: 10px;
+	margin-left: -4px;
+}
+.no-devide{
+	position: relative;
+}
+.no-devide>span{
+	border: none;
+	width: auto;
+}
+.no-devide>span:nth-of-type(2n){
+	position: absolute;
+	right: 0;
+	border: none;
+}
+.traveler{
+	text-align: center;
+	border-bottom: 1px solid #2e3033;
+	padding: 10px 0;
+}
+.devide-inner{
+	padding: 0;
+	border: none;
+	margin: 0;
+}
+.devide-inner>span{
+	padding: 0;
+	border: none;
+	margin: 0;
+}
+#submit{
+	width: 100%;
+	height: 150px;
+	text-align: center;
+	line-height: 150px;
+}

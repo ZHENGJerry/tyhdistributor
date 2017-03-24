@@ -1,0 +1,154 @@
+body{
+	font-family:'hiragino sans gb','PingFangSC-Medium','微软雅黑';
+}
+#main-wrap{
+	width: 940px;
+	margin: 0 auto;
+	background: #f6f6f6;
+	position: relative;
+}
+#main-wrap h5{
+	font-size: 16px;
+	font-weight: 500;
+	padding: 10px;
+	text-align: center;
+}
+.info-wrap{
+	padding-bottom: 150px;
+}
+.info-wrap>div{
+	padding: 20px 10px;
+	border-bottom: 1px dashed #797979;
+	position: relative;
+}
+.info-wrap>div:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+.info-wrap>div:nth-of-type(1){
+	padding: 10px;
+}
+.info-wrap>div li{
+	float: left;
+	margin-right: 40px;
+	padding: 10px 0;
+}
+.info-wrap>div li span{
+	display: inline-block;
+}
+.info-wrap>div li span:nth-of-type(1){
+	text-align: right;
+	padding-right: 10px;
+}
+input[type="button"]{
+	width: 100px;
+	height: 36px;
+	cursor: pointer;
+	color: #fff;
+	font-family:'hiragino sans gb','PingFangSC-Medium','微软雅黑';
+	background: #169bd5;
+	border: none;
+	border-radius: 5px;
+}
+.info-pic{
+	position: relative;
+}
+.info-pic img{
+	width: 160px;
+	height: 160px;
+	border:  1px solid #797979;
+	background: #fff;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+.info-pic input[type="file"]{
+	opacity: 0;
+	width: 100px;
+	height: 36px;
+	position: relative;
+	left: -105px;
+	top: -5px;
+}
+.info-btn{
+	position: absolute;
+	right: 20px;
+	top: 12px;
+}
+.tel{
+	height: 36px;
+	outline: none;
+	padding: 0 10px;
+}
+.phone-warn{
+	color: red;
+	float: right;
+	margin-top: 30px;
+}
+
+/*设置弹窗的样式*/
+.dialog{
+	position: absolute;
+    border: 1px solid #797979;
+    width: 600px;
+    right: 169px;
+    z-index: 10;
+    background: #fff;
+    top: 0;
+    text-align: center;
+}
+.dialog>p{
+	border-bottom: 5px solid #169bd5;
+    padding: 10px;
+}
+.dialog-list li{
+	padding: 10px;
+}
+.dialog-list li>span{
+	display: inline-block;
+	margin-right: 20px;
+}
+.dialog-list li>span:nth-of-type(1){
+	min-width: 90px;
+}
+.dialog-list li>span:nth-of-type(2){
+	width: 260px;
+	position: relative;
+	text-align: left;
+}
+.dialog-list li input{
+	width: 100%;
+	height: 36px;
+}
+.dialog-list li input[type="button"]{
+	width: 90px;
+}
+.pas-sh{
+	display: inline-block;
+	position: absolute;
+	right: 10px;
+	top: 8px;
+	width: 20px;
+	height: 20px;
+	background-image: url(../img/passw.png);
+	background-size: cover;
+}
+.pas-btn{
+	position: absolute;
+	right: 0;
+	top: -8px;
+}
+.dialog-btn{
+	border-top: 1px dashed #797979;
+	margin: 0 10px;
+	padding: 26px 0;
+}
+.dialog-btn input{
+	width: 90px;
+	height: 40px;
+	color: #fff;
+	background: #169bd5;
+	margin: 0 15px;
+	border: none;
+	border-radius: 5px;
+}

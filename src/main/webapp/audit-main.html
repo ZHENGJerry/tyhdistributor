@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>路线产品信息</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/publicUp.css">
+	<link rel="stylesheet" href="css/routeUp.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/ssi-uploader.min.css">
+</head>
+<style>
+	input{
+		letter-spacing: 1.2px;
+	}
+</style>
+<body>
+	<header class="text-center">
+	<h1>路线产品审核</h1>
+	</header>
+	<!-- 第一页 -->
+	<section class="basedInfo clearfix page1" >
+		<h3>基本信息</h3>
+		<!-- <div class="line-ver"></div> -->
+		<div class="basedInfo_container right form-inline">
+			<div class="type">
+				<label class="span_type">产品分类</label>
+				<input type="text" name="path_product_type" readonly class="input_type form-control">
+			</div>
+			<div class="name">
+				<label class="span_name">产品名称</label>
+				<input type="text" class="form-control input_name" readonly name="path_product_name" style="width: 350px;">
+			</div>
+			<div class="id">
+				<label class="span_id" style="margin-left:68px;">产品编号</label>
+				<input type="text" class="input_id form-control" readonly name="path_product_num">
+			</div>
+			<div class="brief_intro">
+				<label class="span_briefIntro">产品简介</label>
+				<input type="text" class="input_briefIntro form-control" readonly name="path_product_intro"  style="width: 650px;">
+			</div>
+			<div class="terminal">
+				<label class="span_terminal">目的地</label>
+				<input type="text" class="input_terminal form-control" readonly name="path_product_destination" style="width: 650px;">
+			</div>
+			<div class="tag">
+				<label class="span_tag">标签</label>
+				<input type="text" class="input_tag form-control" readonly name="path_product_label" style="width: 650px;">
+			</div>
+			<div class="residual">
+				<label class="span_residual">余位设定</label>
+				<input type="text" class="input_residual form-control" readonly name="path_product_residue" style="width: 80px;">
+			</div>
+		</div>
+	</section>
+	<section class="routeUpinfo img_upload clearfix page1" >
+		<h3 style="margin-top: -63.5px;">上传宣传图</h3>
+		<div class="right form-inline">
+		    <div class="imgUpload_container" id="img-ssi-upload">
+		    	<img class="ssi-upload-look" src="" style="margin-left:20px;"></img>  <!-- 图片预览 -->
+		    </div>
+
+		</div>
+	</section>
+	<section class="upProduct img_upload clearfix page1" >
+		<h3 style="margin-top: -63.5px;">上传产品图</h3>
+		<div class="right form-inline">
+		    <div class="imgUpload_container" id="imgUpload_container">
+		    	<div class="imgimg">
+		    		<div class="imgimg-top" >
+		    			<img class="imgi img1" src="" alt="">
+		    		</div>
+		    	</div>
+		    </div>
+		</div>
+	</section>
+
+    <!-- 第二页 -->
+	<section class="fatuan clearfix form-inline page2 head"  id="head">
+		<h3>发团日期</h3>
+		<!-- <div class="line-ver"></div> -->
+		<table class="right tbl_fatuan comple_fatuan">
+			<tr>
+				<th class="head_times">时间类型</th>
+				<th class="head_times show_times">起止时间</th>
+                <th class="head_time show_days" style="display: none;width: 220px;" class="week_day" nowrap>
+                	有效期：
+                	<br>
+                	<!-- <input type="text" class="youxiao_begin form-control" name="calendar_begintime" style="width: 95px;margin-top:10px;" >
+                	-
+                	<input type="text" class="youxiao_end form-control" name="calendar_endtime" style="width: 95px;margin-top:10px;"> -->
+                </th>
+				<th class="head_times">出发城市</th>
+				<th class="head_times">市场价格</th>
+				<th class="head_times">外卖价格</th>
+				<th class="head_times">分销价格</th>
+				<th class="head_times">操作</th>
+			</tr>
+			<tr class="fatuan_tr">
+				<td class="timeType_select" rowspan="100">
+					<span class="times tag_select">日历时间</span>
+					<span class="days tag_select" style="display: none;">每周循环</span>
+				</td>
+				<td class="tuanqi_times  show_times" nowrap>
+					<input type="text" class="times_start form-control" readonly name="cyclic_begintime" style="width: 95px;">
+					-
+					<input type="text" class="times_end form-control" readonly name="cyclic_endtime" style="width: 95px;">
+				</td>
+				<td class="tuanqi_days  show_days" style="display: none">
+					<input type="text" class="youxiao_begin form-control" readonly name="calendar_begintime" style="width: 95px;margin-top:5px;margin-left:3px;" >
+                	-
+                	<input type="text" class="youxiao_end form-control" readonly name="calendar_endtime" style="width: 95px;margin-top:5px;margin-left:3px;">
+                	<br>
+				</td>
+				<td class="">
+					<input type="text" class="start_city form-control" readonly name="cyclic_city" style="width: 90px;">
+				</td>
+				<td class="marketPrice">
+				        <span>成人</span>
+					    <input type="text" class="marketPrice_ad form-control" readonly name="cyclic_price_market_man" style="width: 80px;"><br>
+				        <span>儿童</span>
+					    <input type="text" class="marketPrice_ch form-control" readonly name="cyclic_price_market_child" style="width: 80px;">				
+				</td>
+				<td class="waimaiPrice">
+					<span>成人</span>
+					<input type="text" class="waimaiPrice_ad form-control" readonly name="cyclic_price_takeout_man" style="width: 80px;"><br>
+					<span>儿童</span>
+					<input type="text" class="waimaiPrice_ch form-control" readonly name="cyclic_price_takeout_child" style="width: 80px;">
+				</td>
+				<td class="fenxiaoPrice">
+					<span>成人</span>
+					<input type="text" class="fenxiaoPrice_ad form-control" readonly name="cyclic_price_distrinutiom_man" style="width: 80px;"><br>
+					<span>儿童</span>
+					<input type="text" class="fenxiaoPrice_ch form-control" readonly name="cyclic_price_distribution_child" style="width: 80px;">
+				</td>
+			    <td class="handle">
+			    	<span>预览</span>
+			    </td>
+			</tr>
+		</table>
+	</section>
+	<section class="gather_Info clearfix page2">
+		<h3 style="margin-top: -72px;">集合时间地点</h3>
+		<table class="comple_gather right">
+			<tr>
+				<th>集合时间</th>
+				<th>集合地点</th>
+				<th>操作</th>
+			</tr>
+			<tr class="gather_tr">
+				<td class="gather_time"><input type="text" readonly class="gather-time" name="gather_time"></td>
+				<td class="gather_site"><input type="text" readonly class="gather-place" name="gather_place"></td>
+				<td class="handle">
+					<span>预览</span>
+				</td>
+			</tr>
+
+		</table>
+	</section>
+	<section class="sec_schedule clearfix page2">
+	    <h3>行程安排</h3>
+	    
+	    <table class="schedule right">
+		    <tr class="schedule_tr">
+		    	<td rowspan="6">
+		    		<h4>第<span class="schedule_day">1</span>天</h4>
+		    	</td>
+		    	<td>
+		    		<textarea name="scheduling_describe" readonly class="scheduling-describe" cols="80" rows="5"></textarea>
+		    	</td>
+		    	<td rowspan="6" style="width:56px;">
+		    		<span>预览</span>
+		    	</td>
+		    </tr>
+		    <tr>
+		    	<td>
+		    	    <span class="span_advice product-img" style="margin-left:-1050px;">图片预览</span>
+		    	    <div class="imgimg-1">
+			    		<div class="imgimg-top-1">
+			    			<img class="imgg imgg-1" id="imgm-1-1" src="" alt="">
+			    		</div>
+			    	</div>
+			    	<div class="imgimg-1">
+			    		<div class="imgimg-top-1">
+			    			<img class="imgg imgg-2" id="imgm-1-2" src="" alt="">
+			    		</div>
+			    	</div>
+			    	<div class="imgimg-1">
+			    		<div class="imgimg-top-1">
+			    			<img class="imgg imgg-3" id="imgm-1-3" src="" alt="">
+			    		</div>
+			    	</div>
+		    	</td>
+		    </tr>
+		    <tr class="form-inline"> 
+		    	<td class="hotel" style="text-align: left;">
+		    	    <span style="margin-left:35px;">住&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宿：</span>
+		    	    <input type="text" readonly  class="form-control" style="width:160px;display: inline-block;">
+		    	</td>
+		    </tr>
+		    <tr class="form-inline">
+		    	<td style="text-align: left;">
+		    	    <span style="margin-left:35px;">酒店名称:</span>
+		    	    <input type="text" readonly class="hotel_name form-control" name="scheduling_hotel"/> 
+		    	</td>
+		    </tr>
+		    <tr class="form-inline">
+		    	<td class="food" style="text-align: left;">
+		    	    <span style="margin-left:35px;">包&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;餐:</span>
+		    	    <input type="text" readonly class="hotel_name form-control" name="scheduling_hotel"/> 
+		    	</td>
+		    </tr>
+	    </table>
+	</section>
+	<section class="route_feature clearfix page3 head">
+		<h3>线路特色</h3>
+		<textarea class="right path-product-feature" readonly name="path_product_feature" cols="30" rows="5"></textarea>
+	</section>
+	<section class="order_attention clearfix page3">
+		<h3>预订须知</h3>
+		<textarea class="right path-product-notice" readonly name="path_product_notice" ols="10" rows="5"></textarea>
+	</section>
+	<section class="attention clearfix page3">
+		<h3>注意事项</h3>
+		<textarea class="right path-product-attention" readonly name="path_product_attention" cols="30" rows="5"></textarea>
+	</section>
+    <footer class="page3">
+        <button class="btn_page btn_default  last_page2">审核通过</button>
+    	<button class="route_submit _submit">不通过审核</button>
+    </footer>
+
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="js/audit_main.js"></script>
+</body>
+</html>

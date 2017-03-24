@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加门票</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/publicUp.css">
+	<link rel="stylesheet" href="css/ticketUp.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/ssi-uploader.min.css">
+</head>
+<body>
+    <header class="text-center">
+	    <h1>门票信息添加</h1>
+    </header>	
+    <section class="form-inline">
+	    <span>选择景点</span>
+        <div class="btn-group finace" role="group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:300px;">
+                <span>全部</span><span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu ticket-select">
+                <li><a>请选择景点</a></li>
+                <li><a>盘山</a></li>
+                <li><a>蓟县滑雪场</a></li>
+                <li><a>北京八达岭</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="addTicket clearfix">
+    	<h3>添加票种</h3>
+    	<table class="right tbl_ticket form-inline">
+    		<tr>
+    			<th>订票名称</th>
+    			<th>时间类型</th>
+    			<th>有效期</th>
+    			<th>市场价</th>
+    			<th>外卖价</th>
+    			<th>分销价</th>
+    			<th>操作</th>
+    		</tr>
+    		<tr class="ticket_tr">
+    			<td rowspan="3" class="timeType_select"><textarea name="" id="" cols="10" rows="3"></textarea></td>
+    			<td>工作日</td>
+    			<td colspan="5">
+    			    <table class="inner_tbl">
+    				    <tr>
+    			            <td  class="ticket_times value_times">
+    				        <input type="text" class="form-control datePicker" style="width: 95px;"><br>-<br><input type="text" class="form-control datePicker" style="width: 95px;">
+    			        </td>
+    			        <td><input type="text" class="form-control"></td>
+    			        <td><input type="text" class="form-control"></td>
+    			        <td><input type="text" class="form-control"></td>
+    			        <td>
+    			            <a href="javascript:;" class="add_btn add_ticket" style="display: block">添加</a>
+    			            <a href="javascript:;" class="add_btn del_tr" style="display: block">删除</a>
+    			        </td>
+    			        </tr>
+    			    </table>
+    			  
+    			</td>
+    		</tr>
+    		<tr class="ticket_tr">
+    			<td>周末</td>
+    			<td colspan="5">
+    			    <table class="inner_tbl">
+    				    <tr>
+    			            <td  class="ticket_times value_times">
+    				        <input type="text" class="form-control datePicker" style="width: 95px;"><br>-<br><input type="text" class="form-control datePicker" style="width: 95px;">
+    			        </td>
+    			        <td><input type="text" class="form-control"></td>
+    			        <td><input type="text" class="form-control"></td>
+    			        <td><input type="text" class="form-control"></td>
+    			        <td>
+    			            <a href="javascript:;" class="add_btn add_ticket" style="display: block">添加</a>
+    			            <a href="javascript:;" class="add_btn del_tr" style="display: block">删除</a>
+    			        </td>
+    			        </tr>
+    			    </table>
+    			  
+    			</td>
+    		</tr>
+    		<tr class="ticket_tr">
+    			<td>节假日</td>
+    			<td colspan="5">
+    			    <table class="inner_tbl">
+    				    <tr>
+    			            <td  class="ticket_times value_times">
+    				        <input type="text" class="form-control datePicker" style="width: 95px;"><br>-<br><input type="text" class="form-control datePicker" style="width: 95px;">
+    			        </td>
+    			        <td><input type="text" class="form-control"></td>
+    			        <td><input type="text" class="form-control"></td>
+    			        <td><input type="text" class="form-control"></td>
+    			        <td>
+    			            <a href="javascript:;" class="add_btn add_ticket" style="display: block">添加</a>
+    			            <a href="javascript:;" class="add_btn del_tr" style="display: block">删除</a>
+    			        </td>
+    			        </tr>
+    			    </table>
+    			  
+    			</td>
+    		</tr>
+    	</table>
+    </section>
+    <section class="mustKnow clearfix page3">
+		<h3>预订须知</h3>
+		<textarea class="right width-90" name="" id="" cols="30" rows="5"></textarea>
+	</section>
+	<section class="useFlow clearfix page3">
+		<h3>使用流程</h3>
+		<textarea class="right width-90" name="" id="" cols="30" rows="5"></textarea>
+	</section>
+	<section class="attention clearfix page3">
+		<h3>注意事项</h3>
+		<textarea class="right width-90" name="" id="" cols="30" rows="5"></textarea>
+	</section>
+	<footer class="page3">
+        <a href="#" class="btn_default btn_page">返回</a>
+    	<a href="javascript:;" class="ticket_submit _submit">提交审核</a>
+    </footer>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/ticketUp.js"></script>
+<script type="text/javascript" src="js/publicUp.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+</body>
+</html>

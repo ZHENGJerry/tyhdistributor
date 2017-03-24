@@ -1,0 +1,64 @@
+<!-- 订单详情  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>订单管理</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <!-- <link rel="stylesheet" href="css/orderManage.css"> -->
+  <style type="text/css">
+    /*基本样式*/
+    body{
+      font-size:14px;
+      font-family:'hiragino sans gb','PingFangSC-Medium','微软雅黑';
+    }
+    span {margin-left: 13px;line-height: 25px}
+    
+  </style>
+</head>
+<body >
+    <button class="dj">点击</button>
+    <div class="modal-dialog" role="document" style="z-index: 9999;display: none;">
+        <div class="modal-content" style="width:600px;">
+          <div class="modal-header" style="border-bottom: 1px solid #000">
+            <h4 class="modal-title" style="font-size:18px; text-align:center;" >订单详情</h4>
+          </div>
+          <div class="modal-body">
+            <div class="fist-content" style="padding:15px 0;
+      border-bottom: 1px solid #000; ">
+              <span>订单号</span><span>120101100001</span>
+              <span>产品名称</span><span>天津至云南双飞六日五晚尽情豪华游</span><br>
+              <span>供应商</span><span>北京竹园国际旅行社</span><br>
+              <span>分销商</span><span>天津国中旅行社河东门市部</span><br>
+              <span>下单日期</span><span>2017.03.15</span><span>预定日期</span><span>2017.03.15</span><span>预定数量</span><span>4</span><br>
+              <span>金额</span><span>12345元</span><span>集合地点</span><span>鼓楼旅行超市门口</span><br>
+            </div>
+            <div class="second-content"style="padding:15px 0;
+      border-bottom: 1px solid #000; ">
+              <span>联系人</span><span>欧阳少年</span><span>联系电话</span><span>15822455770</span><br><span>出行人姓名</span><span>欧阳少年</span>
+              <span>证件号码</span><span>130111198801011234</span><br>
+              <span>出行人姓名</span><span>欧阳少年</span><br>
+              <span>出行人姓名</span><span>欧阳少年</span><span>证件号码</span><span>130111198801011234</span>
+            </div>
+          
+          </div>
+          <div class="modal-footer" style="text-align: center;">
+            <button type="button" class="btn btn-primary customer-cacel" data-dismiss="modal">返回</button>      
+          </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>  
+    <script type="text/javascript" src="js/public.js"></script>
+    <!-- <script type="text/javascript" src="js/orderManage.js"></script> -->
+    <script type="text/javascript">
+      $('.dj').on("click",function(){
+        $('.modal-dialog').modal('show');
+        console.log('11');
+      });
+
+    </script>
+</body>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>天津市同游会</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/routeUp.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/ssi-uploader.min.css">
+	<link rel="stylesheet" href="css/routeProduct.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<nav id="nav">
+		<div class="nav-left">
+			<h1>天津同游会</h1>
+			<h2>分销商控制台</h2>
+		</div>
+		<div class="nav-right">
+			<div class="nav-right-name">
+				<div class="nav-right-name-ple">
+					<span></span>
+				</div>
+				<div class="nav-right-name-bus">
+					<span></span>
+				</div>
+			</div>
+			<div class="nav-right-mon">
+				<p class="nav-right-amout">账户余额</p>
+				<p class="nav-right-mon-rmb"><em>￥</em><span>0,000.00</span></p>
+			</div>
+			<button type="button" class="btn btn-default nav-right-rechange">充值</button>
+			<a href="product_index/pro_index.html" class="btn btn-primary nav-right-index" role="button">首页</a>
+			<a href="login.html" class="btn btn-primary nav-right-drop" role="button">退出</a>
+			<div class="nav-right-loginfo">
+				<img src="img/child.png" alt="人物信息" />
+			</div>
+		</div>
+	</nav>
+
+	<div id="main">
+		<aside class="aside">
+		<!-- 删除产品管理 -->
+			<!-- <div class="aside-manage aside-manage-1">
+				<p><span class="icon icon-manage">图标</span><em>产品管理</em><span class="detail">详情</span><span class="aside-manage-triangle"></span></p>
+				<ul class="aside-manage-sub">
+					<li>
+						<a class="aside-manage-product">产品添加</a>
+						<dl class="aside_manage_sun">
+							<dd><a href="routeUp.html" target="main-show">路线产品</a></dd>
+							<dd class="aside_manage_sun_ticket">
+								<a href="javascrit:void(0);">门票产品</a>
+								<dl class="aside_manage_sun_sun">
+									<dd><a href="sceneryUp.html" target="main-show">景点添加</a></dd>
+									<dd><a href="ticketUp.html" target="main-show">门票添加</a></dd>
+								</dl>
+							</dd>
+							<dd class="aside_manage_sun_ticket">
+								<a href="javascrit:void(0);" target="main-show">签证产品</a>
+								<dl class="aside_manage_sun_sun">
+									<dd><a href="add-1.html" target="main-show">信息模板</a></dd>
+									<dd><a href="add-2.html" target="main-show">添加签证</a></dd>
+								</dl>
+							</dd>
+							<dd><a href="pro-manage.html" target="main-show">保险产品</a></dd>
+						</dl>
+					</li>
+					<li><a href="productMagnage.html" target="main-show">管理产品</a></li>
+					<li><a href="javascrit:void(0);" target="main-show">修改产品</a></li>
+					<li><a href="routUp_audit.html" target="main-show">产品审核</a></li>
+				</ul>
+			</div> -->
+			<div class="aside-manage aside-manage-3">
+				<p><span class="icon icon-order">图标</span><em><a href="orderManage.html" target="main-show">订单管理</a></li></em><span class="detail">详情</span><span class="aside-manage-triangle"></span></p>
+			</div>
+			<div class="aside-manage aside-manage-4">
+				<p><span class="icon icon-finance">图标</span><em><a href="finace.html" target="main-show">财务管理</a></em><span class="detail">详情</span><span class="aside-manage-triangle"></span></p>
+			</div>
+			<div class="aside-manage aside-manage-5">
+				<p><span class="icon icon-user">图标</span><em><a href="customer.html" target="main-show">客户管理</a></em><span class="detail">详情</span><span class="aside-manage-triangle"></span></p>
+			</div>
+			<div class="aside-manage">
+			<!-- 店铺管理 -->
+				<p><span class="icon icon-supplier">图标</span><em>店铺管理</em><span class="detail">详情</span><span class="aside-manage-triangle"></span></p>
+				<ul style="height: 60px">
+					<li><a href="product-manage.html" target="main-show">商品管理</a></li>
+					<!-- <li><a href="empty.html" target="main-show">接入电商</a></li> -->
+					<li><a href="dianpu-info.html" target="main-show">店铺信息</a></li>
+				</ul>
+			</div>
+			<div class="aside-manage">
+				<p><span class="icon icon-info">图标</span><em>消息管理</em><span class="detail">详情</span><span class="aside-manage-triangle"></span></p>
+				<ul>
+					<li><a href="empty.html" target="main-show">未读消息</a></li>
+					<li><a href="empty.html" target="main-show">已读消息</a></li>
+					<li><a href="empty.html" target="main-show">发送消息</a></li>
+				</ul>
+			</div>
+			<div class="aside-manage aside-manage-2">
+				<p><span class="icon icon-data">图标</span><em>数据统计</em><span class="detail">详情</span><span class="aside-manage-triangle"></span></p>
+				<ul>
+					<li><a href="empty.html" target="main-show">列表统计</a></li>
+					<li><a href="empty.html" target="main-show">柱状图</a></li>
+				</ul>
+			</div>
+			<div class="aside-manage">
+				<p><span class="icon icon-marketing">图标</span><em>产品营销</em><span class="detail">详情</span><span class="aside-manage-triangle"></span></p>
+				<ul>
+					<li><a href="empty.html" target="main-show">特惠清仓</a></li>
+					<li><a href="empty.html" target="main-show">精准营销</a></li>
+					<li><a href="empty.html" target="main-show">广告营销</a></li>
+				</ul>
+			</div>
+			<div class="aside-manage aside-manage-2">
+				<p><span class="icon icon-num">图标</span><em>账号管理</em><span class="detail">详情</span><span class="aside-manage-triangle"></span></p>
+				<ul>
+					<li><a href="basic-info.html" target="main-show">基本信息</a></li>
+					<li><a href="staffManage.html" target="main-show">员工管理</a></li>
+				</ul>
+			</div>
+		</aside>
+		  
+		<div class="main-right">
+			<!-- 右侧主窗体 -->
+			<iframe id="main-right-show" name="main-show"  frameborder="0" scrolling=auto width=100%></iframe>
+				
+			<!-- 底部弹出消息 -->
+			<footer class="footer">
+				<div class="footer-left">
+					<div class="footer-state footer-useIntro">
+						使用说明
+						<span>&nbsp;</span>
+					</div>
+					<div class="footer-state footer-client">
+						客户支持
+						<span>&nbsp;</span>
+					</div>
+				</div>
+				
+				<div class="footer-right">
+					<figure class="footer-income">
+						<img src="img/income.png" alt="收入"/>
+						<div class="footer-alert">
+							<p>收入<span>0</span></p>
+							<button class="btn btn-default footer-btn btn-income">去处理</button>
+						</div>
+					</figure>
+					<figure class="footer-info">
+						<img src="img/info2.png" alt="消息"/>
+						<div class="footer-alert">
+							<p>消息<span>0</span></p>
+							<button class="btn btn-default footer-btn btn-info">去处理</button>
+						</div>
+					</figure>
+					<figure class="footer-user">
+						<img src="img/customer.png" alt="客户"/>
+						<div class="footer-alert">
+							<p>客户<span>0</span></p>
+							<button class="btn btn-default footer-btn btn-user">去处理</button>
+						</div>
+					</figure>
+					<figure class="footer-order">
+						<img src="img/order_1.png" alt="订单"/>
+						<div class="footer-alert">
+							<p>订单<span>0</span></p>
+							<button class="btn btn-default footer-btn btn-order">去处理</button>
+						</div>
+					</figure>
+				</div>
+			</footer>
+		</div>
+	</div>
+	
+	<!-- 模态框显示 -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" data-backdrop="static"></div>
+
+	<script src="https://cdn.staticfile.org/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/ajaxShow.js"></script>
+	<script type="text/javascript" src="js/json2.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>	
+    <script type="text/javascript" src="js/ssi-uploader.js"></script>
+    <script type="text/javascript" src="js/routeUp_AJAX.js"></script>
+    <script type="text/javascript" src="js/routeProduct.js"></script>
+    <script type="text/javascript" src="js/routeUp.js"></script>
+	<script type="text/javascript" src="js/public.js"></script>
+	<script type="text/javascript" src="js/validate.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	
+</body>
+</html>

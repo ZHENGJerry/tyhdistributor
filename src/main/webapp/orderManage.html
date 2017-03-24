@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>订单管理</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/orderManage.css">
+</head>
+<body>
+	<div id="routeproduct-title">
+		<h1>订单管理</h1>
+	</div>
+
+	<div id="routeproduct">
+		<div class="routeproduct-top">
+			<form class="form-inline" role="form">
+				<div class="btn-group finace" role="group">
+				    <button type="button" class="btn btn-default finace-income input-group-addon">产品类型</button>
+				    <div class="btn-group" role="group">
+				        <button type="button" class="btn btn-default dropdown-toggle order-income-click" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:175px;">
+				       		<span class="order-income-state-click">全部</span><span class="caret"></span>
+					    </button>
+					    <ul class="dropdown-menu order-income-state">
+					        <li><a>全部</a></li>
+					    </ul>
+					</div>
+				</div>
+				<div class="form-group finace" >
+				    <div class="input-group routeproduct-time">
+				      	<div class="input-group-addon">下单时间</div>
+				        <input class="form-control form-width form-control-time form-control-from-time" type="text">
+				        <span class="routeproduct-line">--</span>
+				        <input class="form-control form-width form-control-time form-control-to-time" type="text">
+				    </div>
+				</div>
+				<!-- <div class="form-group finace order-tuanqi" >
+				    <div class="input-group routeproduct-time">
+				      	<div class="input-group-addon">选择团期</div>
+				        <input class="form-control form-width order-manage-tuanqi" type="text">
+				    </div>
+				</div> -->
+				<div class="btn-group finace order-statue" role="group">
+				    <button type="button" class="btn btn-default finace-type input-group-addon">付款状态</button>
+				    <div class="btn-group" role="group">
+				        <button type="button" style="width:125px;" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				       		<span class="order-manage-click">全部订单</span><span class="caret"></span>
+					    </button>
+					    <ul class="dropdown-menu order-manage" style="min-width:125px;">
+					        <li><a>全部订单</a></li>
+					        <li><a>已付款订单</a></li>
+					        <li><a>待付款订单</a></li>
+					        <li><a>待审核订单</a></li>
+					    </ul>
+					</div>
+				</div>
+				
+				<div class="form-group finace order-travel" >
+				    <div class="input-group routeproduct-time">
+				      	<div class="input-group-addon">出行人电话</div>
+				        <input class="form-control form-width order-phone" placeholder="请输入手机号码" type="text">
+				    </div>
+				</div>
+				
+				
+				<!-- <div class="btn-group finace order-employee" role="group">
+				    <button type="button" class="btn btn-default finace-type">操作员工号</button>
+				    <div class="btn-group" role="group">
+				        <button type="button" style="width:125px;" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				       		<span class="order-manage-employee-click">全部员工</span><span class="caret"></span>
+					    </button>
+					    <ul class="dropdown-menu order-manage-employee" style="min-width: 100px;">
+					    	<li><a>全部员工</a></li>
+					        <li><a>001&nbsp;&nbsp;同游会同</a></li>
+					        <li><a>002&nbsp;&nbsp;同游会</a></li>
+					        <li><a>003&nbsp;&nbsp;同游会</a></li>
+					    </ul>
+					</div>
+				</div> -->
+				<div class="btn-group finace" role="group" style="margin-left: 65px">
+				    <button type="button" class="btn btn-default finace-type input-group-addon">证件号码</button>
+				    <div class="btn-group" role="group">
+				        <button type="button" style="width:100px;" class="btn btn-default dropdown-toggle order-identify" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				       		<span class="order-type-click">身份证</span><span class="caret"></span>
+					    </button>
+					    <ul class="dropdown-menu order-type" style="min-width:100px;">
+					        <li><a>身份证</a></li>
+					        <li><a>护照</a></li>
+					        <li><a>军官证</a></li>
+					    </ul>
+					</div>
+					<input class="form-control form-width form-control-time form-phone order-indentify" type="text" placeholder="请输入出行人证件号码" style="margin-left:5px;width:180px;">
+				</div>
+				<div class="form-group finace order-num" >
+				    <div class="input-group routeproduct-time" style="margin-left: 12px">
+				      	<div class="input-group-addon">姓名</div>
+				        <input class="form-control form-width form-control-time form-phone order-num-order" type="text" placeholder="请输入出行人姓名">
+				    </div>
+				</div>
+
+				<div class="form-group finace order-usernamephone" >
+				    <div class="input-group routeproduct-time">
+				      	<div class="input-group-addon">联系人电话</div>
+				        <input class="form-control form-width ordre-accision-phone" placeholder="请输入手机号码" type="text">
+				    </div>
+				</div>
+				<div class="form-group finace order-num" style="margin-left: 58px">
+				    <div class="input-group routeproduct-time" style="margin-left: 5px">
+				      	<div class="input-group-addon">订单号</div>
+				        <input class="form-control form-width form-control-time form-phone order-num-order" type="text" placeholder="请输入订单号">
+				    </div>
+				</div>
+				<!-- <div class="form-group finace" >
+				    <div class="input-group routeproduct-time">
+				      	<div class="input-group-addon">分销商</div>
+				        <input class="form-control form-width order-fen-id" placeholder="分销商ID" type="text">
+				    </div>
+				    <div class="btn-group" role="group">
+				        <button type="button" class="btn btn-default dropdown-toggle order-manage-id-select" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:280px;">
+				       		<span class="order-manage-id-click">全部分销商</span><span class="caret"></span>
+					    </button>
+					    <ul class="dropdown-menu order-manage-id">
+					        <li><a>全部分销商</a></li>
+					    </ul>
+					</div>
+				</div> -->
+				<!-- <button type="button" class="btn btn-primary order-add">添加订单</button> -->
+				<button type="button" class="btn btn-primary finace-search">查询</button>
+			</form>
+		</div>
+		
+		<div id="finace-middle">
+			
+			<p class="finace-order">共计有&nbsp;&nbsp;&nbsp;<span>120</span>&nbsp;&nbsp;&nbsp;个订单</p>
+			<div class="finace-select">
+				<input type="checkbox" class="finace-order-select" style="position: relative;top:2px;">&nbsp;&nbsp;选择全部
+			</div>
+			<button type="button" class="btn btn-primary order-export">导出Excel结果</button>
+			<button type="button" class="btn btn-primary order-pay">付款</button>
+		</div>
+		
+		<table class="table table-hover table-routeproduct table-inquery" id="table" style="table-layout:fixed">
+			<caption>
+				<h3>查询结果</h3>
+			</caption>
+	      	<thead class="routeproduct-inquire-thead">
+		        <tr>
+		            <th class="order-serial">序号</th>
+		            <th class="order-num">订单号</th>
+		            <th class="order-product">产品名称</th>
+		            <th class="order-username">联系人</th>
+		            <th class="order-tellphone">联系电话</th>
+		            <th class="order-account">数量</th>
+		            <th class="order-money">金额</th>
+		            <th class="order-income-detail">付款状态</th>
+		            <th class="order-out-detail">详情</th>
+		            <th class="order-detail">操作</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		        <tr>
+		          	<td class="order-serial arial-sans"><label class="finace-xuhao"><input type="checkbox" class="finace-xh-select">&nbsp;001</label></td>
+		         	<td class="order-num arial-sans">120120001001</td>
+		         	<td class="order-product">泰国曼谷普吉岛至泰国曼谷普吉岛至泰国曼谷普吉岛至</td>
+		          	<td class="order-username arial-sans">欧阳少华</td>
+		          	<td class="order-tellphone">15822455770</td>
+		          	<td class="order-account">50人</td>
+		          	<td class="order-money">12345元</td>
+		          	<td class="order-income-detail">已付款</td>
+		          	<td class="order-out-detail"><button type="button" class="btn btn-primary">详情</button></td>
+		          	<td class="order-detail">
+		          		<div class="btn-group" role="group">
+					        <button type="button" style="width:60px;" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					       		<span class="order-manage-operation-click">操作</span><span class="caret"></span>
+						    </button>
+						    <ul class="dropdown-menu order-manage-operation">
+						        <li><a>操作</a></li>
+						        <li><a>审核</a></li>
+						        <li><a>取消</a></li>
+						        <li><a>退款</a></li>
+						        <li><a>删除</a></li>
+						    </ul>
+						</div>
+		          	</td>
+		        </tr>
+	      	</tbody>
+	    </table>
+    </div>
+
+    
+	
+	
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>	
+	<script type="text/javascript" src="js/public.js"></script>
+	<script type="text/javascript" src="js/orderManage.js"></script>
+</body>
+</html>

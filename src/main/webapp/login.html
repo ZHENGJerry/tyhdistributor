@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+	<div id="reg-login">
+		<section id="login-main">
+			<h1>登录</h1>
+			<h2>同游会</h2>
+			<p class="reg-login-text">让天下没有难做的旅游生意</p>
+
+			<!-- 登录界面 -->
+			<section class="login" style="display:block;">
+				<form class="login-main-right login-log login-info" enctype="multipart/form-data">
+					<input type="text" id="log-username" name="log_username" class="form-control login-input login-username" maxlength="11"  placeholder="手机号码" />
+					<input type="password" id="log-password" name="log_password" class="form-control login-input login-password" placeholder="密码" /><span class="login-password-show">显密</span>
+					<input type="text" id="log-validatenum" name="reg_validatenum" class="form-control login-input login-validate-num" maxlength="4" placeholder="请输入验证码" />
+				
+					<button class="btn btn-default login-main-cellphone" type="button">获取验证码</button>
+					<button class="btn btn-default login-main-reg" type="button">立即注册</button>
+					<button class="btn btn-default login-main-forgetnum" type="button">忘记密码</button>
+					<button class="btn btn-default login-main-log login-in" type="button">登  录</button>
+				</form>	
+			</section>
+
+			<!-- 注册界面 -->
+			<div class="login-main-right login-reg login-reg-interfance" style="display:none;">
+				<form  class="form-horizontal regist regist-info" enctype="multipart/form-data" role="form">
+					<div class="row form-group reg-username-info">
+						<label class="control-label col-md-2"><span class="reg-icon reg-icon-num">图标</span></label>
+						<input type="text" id="reg-username" name="reg_username" class="form-control col-md-10 login-input" maxlength="11" placeholder="手机注册账号" title="请输入有效注册手机账号">
+					</div>
+					<div class="row form-group reg-password-info">
+						<label class="control-label col-md-2"><span class="reg-icon reg-icon-num">图标</span></label>
+						<input type="password" id="reg-password" name="reg_password" class="form-control col-md-10 login-input"  placeholder="密码"><span class="reg-password-show">显密</span>
+					</div>
+					<div class="row form-group reg-email-info">
+						<label class="control-label col-md-2"><span class="reg-icon reg-icon-num">图标</span></label>
+						<input type="text" id="reg-email" name="reg_email" class="form-control col-md-10 login-input"  placeholder="邮箱">
+					</div>
+					<div class="row form-group reg-validate-info">
+						<label class="control-label col-md-2"><span class="reg-icon reg-icon-num">图标</span></label>
+						<div class="form-group col-md-10">
+							<input type="text" id="reg-validatenum" name="reg_validatenum" maxlength="4" class="form-control login-input reg-validate-num" placeholder="验证码" />
+							<button  class="btn btn-default reg-main-cellphone" disabled type="button">获取验证码</button>
+						</div>
+					</div>
+				</form>
+				<div class="per-info">
+					<span class="hori-top">上线</span>
+					<p>请填写真实资料，以便同游会处理</p>
+					<span class="per-info-or">OR</span>
+					<button class="btn btn-default info-company per-info-company" disabled type="button" >我是企业</button>
+					<button class="btn btn-default info-person  per-info-person" disabled type="button" >我是个人</button>
+				</div>
+			</div>
+
+			<!-- 企业/分销商注册 -->
+			<div class="login-main-right login-reg business" style="display:none;">
+				<!-- 企业注册 -->
+				
+				<!-- 隐藏域，区分角色 -->
+				<input type="hidden" name="role1" id="role1">
+				<input type="hidden" name="role2" id="role2">
+
+				<form  class="form-horizontal regist reg-interface company" enctype="multipart/form-data" role="form" style="display: none;">
+					<!-- 企业注册第一页 -->
+					<!-- 动态添加隐藏域 -->
+					<input type="hidden" value="110" id="company_address_nationwide_num" name="company_address_nationwide_num">
+					<input type="hidden" value="101" id="company_address_county_num" name="company_address_county_num">
+					<div class="page1" style="display:none;">
+						<div class="row form-group regist-company-name">
+							<label class="control-label col-md-2"><span class="reg-icon icon-company-name">图标</span></label>
+							<input type="text" id="reg-company-name" name="reg_company_name" class="form-control col-md-10 login-input"  placeholder="请输入企业中文名称" title="请输入企业名称--中文">
+						</div>
+						<div class="row form-group address regist-company-address">
+							<label  class="control-label col-md-2"><span class="reg-icon icon-address">图标</span></label>
+							<div class="btn-group">
+								  <button type="button" class="btn btn-default show-address company-address-nationwide">北京市<span class="caret"></span></button>
+							</div>
+							<div class="row btn-group">
+								  <button type="button" class="btn btn-default show-address company-address-county">东城区<span class="caret"></span></button>
+							</div>
+						</div>
+						<div class="row form-group detail-address regist-company-detail-address">
+							<label class="control-label col-md-2"><span class="reg-icon icon-detail-address">详细地址</span></label>
+							<input type="text" id="reg-company-address" name="reg_company_address" class="form-control col-md-10 login-input"  placeholder="请输入详细地址">
+						</div>
+						<div class="row form-group phone regist-company-phone">
+							<label class="control-label col-md-2"><span class="reg-icon icon-phone">电话</span></label>
+							<input type="text" id="reg-company-phone" name="reg_company_phone" maxlength="12" class="form-control col-md-10 login-input company-phone" title="请输入正确座机号码"  placeholder="请输入座机电话(022-23245555)">
+						</div>
+						<div class="row form-group cellphone regist-company-cellphone">
+							<label class="control-label col-md-2"><span class="reg-icon icon-cellphone">手机</span></label>
+							<input type="text" id="reg-company-cellphone" name="reg_company_cellphone"  class="form-control col-md-10 login-input company-cellphone" maxlength="11" title="请输入有效业务联系人手机号码"  placeholder="请输入业务联系人手机号码">
+						</div>
+						<div class="row form-group administrator-name regist-company-administrator-name">
+							<label class="control-label col-md-2"><span class="reg-icon icon-administrator-name">管理员姓名</span></label>
+							<input type="text" id="reg-company-administrator-name" name="reg_company_administrator_name" class="form-control col-md-10 login-input company-administrator-name"  placeholder="管理员姓名">
+						</div>
+						<div class="row form-group administrator-phone regist-company-administrator-phone">
+							<label class="control-label col-md-2"><span class="reg-icon icon-administrator-phone">管理员电话</span></label>
+							<input type="text" id="reg-company-administrator-phone" name="reg_company_administrator_phone" class="form-control col-md-10 login-input company-administrator-phone"  maxlength="11"  title="请输入有效管理员手机号码"  placeholder="管理员手机号码">
+						</div>
+					</div>
+					<!-- 企业注册第二页 -->
+					<div class="page2" style="display:none;">
+						<div class="row form-group bank regist-company-bank">
+							<label class="control-label col-md-2"><span class="reg-icon icon-bank">银行账户</span></label>
+							<input type="text" id="reg-company-bank" name="reg_company_bank"  class="form-control col-md-10 login-input company-bank" placeholder="请输入银行账户名称">
+						</div>
+						<div class="row form-group bankcard regist-company-bankcard">
+							<label class="control-label col-md-2"><span class="reg-icon icon-bankcard">银行卡号</span></label>
+							<input type="text" id="reg-company-bankcard" name="reg_company_bankcard" class="form-control col-md-10 login-input company-bankcard"  placeholder="请输入银行卡号">
+						</div>
+						<div class="row form-group bankcard-name regist-company-bank-name">
+							<label class="control-label col-md-2"><span class="reg-icon icon-bankcard-name">开户行名称</span></label>
+							<input type="text" id="reg-company-bankcard-name" name="reg_company_bankcard_name" class="form-control col-md-10 login-input company-bankcard-name"  placeholder="请输入开户行名称">
+						</div>
+						<div class="row form-group alipay regist-company-alipay">
+							<label class="control-label col-md-2"><span class="reg-icon icon-alipay">支付宝账号</span></label>
+							<input type="text" id="reg-company-alipay" name="reg_company_alipay" class="form-control col-md-10 login-input company-alipay"  placeholder="支付宝账号">
+						</div>
+						<div class="row form-group receive-message regist-company-receive-message">
+							<label class="control-label col-md-2"><span class="reg-icon icon-receive-message">接收消息</span></label>
+							<input type="text" id="reg-company-receive-message" name="reg_company_receive_message" class="form-control col-md-10 login-input" maxlength="11" title="请输入有效手机账号"  placeholder="请输入接收短信手机号">
+						</div>
+						<div class="per-info select-company">
+							<span class="hori-top">上线</span>
+							<p>请填写真实资料，以便同游会处理</p>
+							<span class="per-info-or">OR</span>
+							<button class="btn btn-default info-company support-company" type="button">我是供应商</button>
+							<button class="btn btn-default info-person sale-company" type="button">我是分销商</button>
+						</div>
+						<div class="support-company-info">
+							<p>已收到您的信息，我们的工作人员会在2个工作日内电话与您联系，进行下一步的身份信息人工审核，目前系统默认您为分销商，你可浏览网站，不能进行供应商操作，敬请谅解，谢谢合作</p>        
+						</div>
+						<div class="sale-company-info">
+							<p>已收到您的信息，我们的工作人员会在2个工作日内电话与您联系，进行下一步的身份信息人工审核，目前系统默认您为分销商，你可浏览网站，不能进行供应商操作，敬请谅解，谢谢合作</p>        
+						</div>
+						<button class="btn btn-default login-main-log register register-company" type="submit" disabled>确定注册</button>
+					</div>
+				</form>
+				<button class="btn btn-default reg-compay-btn" type="button" disabled style="display: none;">下一步</button>
+
+				<!-- 分销商注册 -->
+				<form  class="form-horizontal regist reg-interface distributor" role="form" method="post"  enctype="multipart/form-data"  style="display: none;">
+					<input type="hidden" value="110" id="distributor_address_nationwide_num" name="company_address_nationwide_num">
+					<input type="hidden" value="101" id="distributor_address_county_num" name="company_address_county_num">
+					<div class="distributor-person" style="display: none;">
+						<div class="row form-group address regist-distributor-address">
+							<label  class="control-label col-md-2"><span class="reg-icon icon-address">图标</span></label>
+							<div class="btn-group">
+								  <button type="button" class="btn btn-default show-address distributor-address-nationwide">北京市<span class="caret"></span></button>
+							</div>
+							<div class="row btn-group">
+								  <button type="button" class="btn btn-default show-address distributor-address-county">东城区<span class="caret"></span></button>
+							</div>
+						</div>
+						<div class="row form-group bank regist-distributor-bank">
+							<label class="control-label col-md-2"><span class="reg-icon icon-bank">银行账户</span></label>
+							<input type="text" id="reg-distributor-bank" name="reg_distributor_bank" class="form-control col-md-10 login-input distributor-bank"  placeholder="请输入银行账户名称">
+						</div>
+						<div class="row form-group bankcard regist-distributor-bankcard">
+							<label class="control-label col-md-2"><span class="reg-icon icon-bankcard">银行卡号</span></label>
+							<input type="text" id="reg-distributor-bankcard" name="reg_distributor_bankcard" class="form-control col-md-10 login-input distributor-bankcard"  placeholder="请输入银行卡号">
+						</div>
+						<div class="row form-group bankcard-name regist-distributor-bank-name">
+							<label class="control-label col-md-2"><span class="reg-icon icon-bankcard-name">开户行名称</span></label>
+							<input type="text" id="reg-distributor-bankcard-name" name="reg_distributor_bankcard_name" class="form-control col-md-10 login-input distributor-bankcard-name"  placeholder="请输入开户行名称">
+						</div>
+						<div class="row form-group alipay regist-distributor-alipay">
+							<label class="control-label col-md-2"><span class="reg-icon icon-alipay">支付宝账号</span></label>
+							<input type="text" id="reg-distributor-alipay" name="reg_distributor_alipay" class="form-control col-md-10 login-input distributor-alipay"  placeholder="支付宝账号">
+						</div>
+						<div class="row form-group receive-message regist-distributor-receive-message">
+							<label class="control-label col-md-2"><span class="reg-icon icon-receive-message">接收消息</span></label>
+							<input type="text" id="reg-distributor-receive-message" name="reg_distributor_receive_message" class="form-control col-md-10 login-input" title="请输入有效的手机账号" maxlength="11"  placeholder="请输入手机号">
+						</div>
+						<div class="per-info select-company">
+							<span class="hori-top">上线</span>
+							<p>请填写真实资料，以便同游会处理</p>
+							<span class="per-info-or">OR</span>
+							<button class="btn btn-default info-company per-distributor" type="button">个人分销商</button>
+							<button class="btn btn-default info-person per-guide" type="button">领队/导游</button>
+						</div>
+						<div class="per-distributor-info">
+							<p>已为您开通个人分销商功能，您将享有个人分销商的权利和义务，点击确认注册则视为同意全部个人分销商的权利和义务条款</p>	  
+						</div>
+						<button class="btn btn-default login-main-log register register-distributor" type="button" disabled>确定注册</button>
+					</div>
+				
+					<!-- 导游界面 -->
+					<div class="distributor-guide" style="display: none;">
+						<div class="card">
+							<p class="idCard">身份选择</p>
+							<div class="radio IDcard">
+							    <label class="radio-inline">
+								    <input type="radio" name="idcardselect" value="中文导游"> 中文导游 
+								</label>
+								<label class="radio-inline">
+								    <input type="radio" name="idcardselect" value="英文导游"> 英文导游
+								</label>
+								<label class="radio-inline">
+								    <input type="radio" name="idcardselect" value="旅游领队"> 旅游领队
+								</label>
+								<label class="radio-inline">
+								    <input type="radio" name="idcardselect" value="户外领队"> 户外领队
+								</label>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+						<div class="pass-file" id="pass-file">
+							<!-- <p class="file-text">上传证件</p> -->
+							<input type="file" id="pass-file-img" name="file_img" class="pass-file-img">
+							<input type="hidden" id="hidden-img" name="pass_file_img">
+							<div class="img_container" id="img_container">
+								<img id="img-preview"  width="75" height="55">
+							</div>
+							<p class="file-tooltip">导游证/领队证，请上传2M以内的照片</p>
+						</div>
+						<div class="clearfix"></div>
+						<p class="file-text-tooltip">已为您开通个人分销商功能，您将享有个人分销商的权利和义务和导游/领队权限，点击确认注册则视为同意全部<span class="color-pink">个人分销商的权利和义务条款</span>和<span class="color-pink">导游/领队权限</span></p>
+						<button class="btn btn-default login-main-log register register-guide" disabled type="submit">确定注册</button>
+					</div>
+				</form>
+				<!-- 七牛云域名 -->
+				<input type="hidden" id="domain" value="http://pics.ctripfair.com/">
+				<input type="hidden" id="upkoen_url" value="http://ctripfair.com/tyhcontrol/qnytoken">
+
+				<div class="reg-sueccss">
+					<p>注册成功</p>
+				</div>
+				<div class="log-success">
+					<p>登录成功</p>
+				</div>
+			</div>
+			
+			
+			<!-- 备案号信息 -->
+			<span class="company-info">Copyright c <time>2016</time>, chekunet.com, All Rights Reserved 津ICP备16006411号-1</span>
+		</section>
+
+
+		<!-- 城市选择 -->
+		<div id="select-city">
+		    <form class="form-inline">
+		      <div data-toggle="distpicker">
+		        <div class="form-group">
+		          <label class="sr-only" for="province1" >Province</label>
+		          <select class="form-control" id="province1" style="width:150px;"></select>
+		        </div>
+		        <div class="form-group">
+		          <label class="sr-only" for="city1">City</label>
+		          <select class="form-control" id="city1" style="width:150px;"></select>
+		        </div>
+		    </form>
+		</div>
+
+	</div>
+	<script src="https://cdn.staticfile.org/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/fn.js"></script>
+	<script type="text/javascript" src="js/jquery-form.js"></script>
+	<script type="text/javascript" src="js/distpicker.data.js"></script>
+	<script type="text/javascript" src="js/distpicker.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery-validate.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/moxie.js"></script>
+	<script type="text/javascript" src="js/plupload.full.min.js"></script>
+	<script type="text/javascript" src="js/json2.js"></script>
+	<script src="https://cdn.staticfile.org/qiniu-js-sdk/1.0.14-beta/qiniu.min.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>

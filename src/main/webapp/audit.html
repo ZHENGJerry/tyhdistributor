@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!---->
+	<meta charset="UTF-8">
+	<title>产品审核列表</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/routeProduct.css">
+</head>
+<body>
+	<div id="routeproduct-title">
+		<h1>产品审核列表</h1>
+	</div>
+
+	<div id="routeproduct">
+		
+		<table class="table table-hover table-routeproduct">
+	      	<thead>
+		        <tr>
+		            <th class="routeproduct-serial">序号</th>
+		            <th class="routeproduct-num">产品编号</th>
+		            <th class="routeproduct-product routeproduct-audit">产品名称</th>
+		            <th class="routeproduct-validate">供应商</th>
+		            <th class="routeproduct-state">状态</th>
+		            <th class="routeproduct-detail">产品详情</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		        <tr>
+		          	<td class="routeproduct-serial arial-sans">1</td>
+		         	<td class="routeproduct-num arial-sans">120120001001</td>
+		         	<td class="routeproduct-product routeproduct-audit">泰国曼谷+芭提雅+普吉岛至尊帝皇五晚七日游</td>
+		          	<td class="routeproduct-validate arial-sans">111658947</td>
+		          	<td class="routeproduct-state">待审核</td>
+		          	<td class="routeproduct-detail"><a href="audit-main.html?productNum=1&type=2" class="btn btn-primary btn-intro">查看详情</a></td>
+		        </tr>
+	      	</tbody>
+	    </table>
+	    
+	</div>
+	
+	
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/json2.js"></script>
+	<script>
+		$(function(){
+
+			 $.ajax({
+			 	url:'/tyhadmin/selectPathProductChangeState',
+			 	type:'post',
+			 	dataType:'json',
+			 	cache:false,
+			 	success:succFunction,
+			 });
+
+			function succFunction(data){
+				$('.table-routeproduct').find('tbody').find('tr').eq(0).remove()
+				//var data=JSON.parse(data);
+				// console.log(data);
+				var data=data;
+
+				$.each(data,function(index,element){
+					var id=index+1;
+					var path_product_num=data[index].path_product_num;
+					var path_product_name=data[index].path_product_name;
+					var path_product_username=data[index].path_product_username;
+					var path_audit_state=data[index].path_audit_state;
+					var path_product_starttype=data[index].path_product_starttype;
+
+					var _html='<tr>'+
+					'<td class="routeproduct-serial arial-sans">'+id+'</td>'+
+		         	'<td class="routeproduct-num arial-sans">'+path_product_num+'</td>'+
+		         	'<td class="routeproduct-product routeproduct-audit">'+path_product_name+'</td>'+
+		          	'<td class="routeproduct-validate arial-sans">'+path_product_username+'</td>'+
+		          	'<td class="routeproduct-state">待审核</td>'+
+		          	'<td class="routeproduct-detail"><a class="btn btn-primary btn-intro">查看详情</a></td>'+
+		        	'</tr>';
+
+
+		        	$('.table-routeproduct').find('tbody').append(_html);
+
+		        	$('.btn-intro').eq(index).click(function(){
+		        		window.location.href='/tyhadmin/audit-main.html?productNum='+path_product_num+'&type='+path_product_starttype;
+		        	});
+
+
+				});
+
+			}
+			
+		});
+	</script>
+</body>
+</html>

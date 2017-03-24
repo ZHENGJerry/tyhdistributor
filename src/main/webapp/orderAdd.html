@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加订单</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/orderAdd.css">
+</head>
+<body>
+	<div id="routeproduct-title">
+		<h1>添加订单</h1>
+	</div>
+
+	<div id="routeproduct">
+		<div class="routeproduct-top">
+			<form class="form-inline" role="form">
+				<div class="form-group finace" >
+				    <div class="input-group routeproduct-time">
+				      	<div class="input-group-addon">产品名称</div>
+				        <input class="form-control form-width order-product" readonly value="至尊豪华云南大理丽江双飞五晚六日情侣双人游" type="text" style="width:350px;">
+				    </div>
+				</div>
+				<div class="form-group finace" style="margin-left: 33px;" >
+				    <div class="input-group routeproduct-time">
+				      	<div class="input-group-addon">产品编号</div>
+				        <input class="form-control form-width order-product-num" readonly type="text">
+				    </div>
+				</div>
+				<div class="form-group finace" style="margin-left: 17px;" >
+				    <div class="input-group routeproduct-time">
+				      	<div class="input-group-addon">日期</div>
+				        <input class="form-control form-width order-product-date" readonly type="text">
+				    </div>
+				</div>
+				<div class="form-group finace" >
+				    <div class="input-group routeproduct-time">
+				      	<div class="input-group-addon order-price">价格</div>
+				    </div>
+				</div>
+				<div class="form-group finace" style="margin-left: 5px;" >
+				    <div class="input-group routeproduct-time">
+				      	<div class="input-group-addon" style="width:40px;">成人</div>
+				        <input class="form-control form-width order-product-adult" readonly value="123456元/132000元" type="text" style="width:150px;">
+				    </div>
+				</div>
+				<div class="form-group finace" style="margin-left: 5px;">
+				    <div class="input-group routeproduct-time">
+				      	<div class="input-group-addon" style="width:40px;">儿童</div>
+				        <input class="form-control form-width order-product-child" readonly value="123456元/132000元" type="text" style="width:150px;">
+				    </div>
+				</div>
+				<div class="form-group finace" style="margin-left: 5px;">
+				    <div class="input-group routeproduct-time">
+				      	<div class="input-group-addon" style="width: 60px;">分销商</div>
+				        <input class="form-control form-width order-product-id" placeholder="分销商ID" type="text">
+				    </div>
+				    <div class="btn-group" role="group">
+				        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:270px;">
+				       		<span class="finace-settlment-state-click">全部分销商</span><span class="caret"></span>
+					    </button>
+					    <ul class="dropdown-menu finace-settlment-state">
+					        <li><a>全部分销商</a></li>
+					        <li><a>北京易游天下国际旅行社天津分公司</a></li>
+					        <li><a>北京易游天下国际旅行社天津分公司</a></li>
+					        <li><a>北京易游天下国际旅行社天津分公司</a></li>
+					    </ul>
+					</div>
+				</div>
+				<!-- <button type="button" class="btn btn-primary order-add">添加订单</button>
+				<button type="button" class="btn btn-primary finace-search">查询</button> -->
+			</form>
+		</div>
+
+		<table class="table  table-routeproduct table-inquery" id="table" style="table-layout:fixed">
+		    <tbody>
+		        <tr>
+		          	<td>
+			          	<form class="form-inline" role="form">
+			          		<div class="form-group" style="margin-left: 5px;">
+							    <div class="input-group routeproduct-time">
+							      	<div class="input-group-addon">联系人姓名</div>
+							        <input class="form-control form-width order-product-username"  type="text" style="width:120px;">
+							    </div>
+							</div>
+							<div class="form-group" style="margin-left: 5px;">
+							    <div class="input-group routeproduct-time">
+							      	<div class="input-group-addon">联系人电话</div>
+							        <input class="form-control form-width order-product-phone"  type="text" style="width:120px;">
+							    </div>
+							</div>
+							<div class="form-group" style="margin-left: 50px;">
+							    <div class="input-group routeproduct-time">
+							      	<div class="input-group-addon order-price">数量</div>
+							    </div>
+							</div>
+							<div class="accout" role="group">
+							    <div class="input-group-addon accition">成人</div>
+							    <div class="btn-group adult" role="group" >
+							        <button type="button" class="btn btn-default dropdown-toggle adult-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							       		&nbsp;&nbsp;<span class="audlt-num">0</span><span class="caret" style="margin-left: 10px;margin-top:15px!important;"></span>
+								    </button>
+								    <ul class="dropdown-menu audlt-num-ge" style="min-width: 50px;">
+								        <li><a>0</a></li>
+								        <li><a>1</a></li>
+								        <li><a>2</a></li>
+								    </ul>
+								</div>
+							</div>
+							<div class="accout" role="group">
+							    <div class="input-group-addon accition">儿童</div>
+							    <div class="btn-group adult" role="group" >
+							        <button type="button" class="btn btn-default dropdown-toggle adult-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							       		&nbsp;&nbsp;<span class="child-num">0</span><span class="caret" style="margin-left: 10px;margin-top:15px!important;"></span>
+								    </button>
+								    <ul class="dropdown-menu child-num-ge" style="min-width: 50px;">
+								        <li><a>0</a></li>
+								        <li><a>1</a></li>
+								        <li><a>2</a></li>
+								    </ul>
+								</div>
+							</div>
+							<label style="font-weight: normal;margin-bottom: 0;margin-left: 90px;">
+								<span class="add-travel">增加</span>&nbsp;&nbsp;添加出行人信息
+							</label>
+						<form class="form-inline" role="form">
+		          	</td>
+		        </tr>
+		        <!-- <tr class="add-per-info">
+		        	<td>
+		        		<div class="add-info" style="height:80px;">
+			        		<div class="order-td-left">删除</div>
+			        		<div id="add-travel-info">
+				          		<div class="form-group" style="margin-left: 5px;display: inline-block" >
+								    <div class="input-group routeproduct-time">
+								      	<div class="input-group-addon">出行人姓名</div>
+								        <input class="form-control form-width customer-add-name"  type="text" style="width:120px;">
+								    </div>
+								</div>
+								<div class="form-group" style="margin-left: 5px;display: inline-block">
+								    <div class="input-group routeproduct-time">
+								      	<div class="input-group-addon">联系电话</div>
+								        <input class="form-control form-width customer-add-tellphone"  type="text" style="width:120px;">
+								    </div>
+								</div>
+								<div class="btn-group indentify" role="group">
+								    <button type="button" class="btn btn-default first-btn">证件号码</button>
+								    <div class="btn-group" role="group">
+								        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:100px;margin-right: 10px;">
+								       		<span class="customer-indentify-click">身份证</span><span class="caret"></span>
+									    </button>
+									    <ul class="dropdown-menu customer-indentify">
+									        <li><a>身份证</a></li>
+									        <li><a>护照</a></li>
+									        <li><a>军官证</a></li>
+									    </ul>
+									    <input class="form-control form-width customer-add-identify"  type="text" style="width:180px;">
+									</div>
+								</div>
+								<div class="btn-group gather-order" role="group">
+								    <button type="button" class="btn btn-default first-btn">集合地点</button>
+								    <div class="btn-group" role="group">
+								        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:325px;">
+								       		<span class="customer-jihe-click">全部</span><span class="caret" style="margin-top: 15px;"></span>
+									    </button>
+									    <ul class="dropdown-menu customer-jihe">
+									        <li><a>全部</a></li>
+									        <li><a>06：00 滨海国际机场T2航站楼总服务台</a></li>
+									        <li><a>06：00 滨海国际机场T2航站楼总服务台</a></li>
+									    </ul>
+									</div>
+								</div>
+								<div class="form-group order-pay-money">
+								    <div class="input-group routeproduct-time">
+								      	<div class="input-group-addon">结算金额</div>
+								        <input class="form-control form-width customer-add-money"  type="text" style="width:120px;"><span class="order-danwei">元&nbsp;&nbsp;自定义</span>
+								    </div>
+								</div>
+							</div>
+							<div class="order-td-right">
+								<div class="accout" role="group">
+								    <div class="btn-group" role="group" >
+								        <button type="button" class="btn btn-default dropdown-toggle order-operation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								       		&nbsp;&nbsp;<span class="customer-uppdate-click">操作</span><span class="caret" style="margin-left: 10px;margin-top:15px!important;"></span>
+									    </button>
+									    <ul class="dropdown-menu customer-uppdate" style="min-width: 70px;">
+									        <li><a>操作</a></li>
+									        <li><a>修改</a></li>
+									        <li><a>取消</a></li>
+									        <li><a>确定</a></li>
+									    </ul>
+									</div>
+								</div>
+							</div>
+						</div>
+		        	</td>
+		        </tr> -->
+		        <tr>
+		        	<td>
+		        		<div>
+			          		<div class="form-group" style="display:inline-block;margin-left: 40px;">
+							    <div class="input-group routeproduct-time">
+							      	<div class="input-group-addon">订单号</div>
+							        <input class="form-control form-width order-nums" placeholder="请点击获取" readonly type="text">
+							        <button type="button" class="btn btn-primary">获取订单号</button>
+							    </div>
+							</div>
+							<div class="btn-group operator-employee" role="group">
+							    <button type="button" class="btn btn-default" style="height:34px;background: #eee;">操作员工号</button>
+							    <div class="btn-group" role="group">
+							        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:60px;margin-right: 10px;">
+							       		<span class="customer-employee-click">001</span><span class="caret" style="margin-top: 15px;"></span>
+								    </button>
+								    <ul class="dropdown-menu customer-employee" style="min-width: 60px;">
+								        <li><a>001</a></li>
+								        <li><a>002</a></li>
+								        <li><a>003</a></li>
+								        <li><a>004</a></li>
+								        <li><a>005</a></li>
+								        <li><a>006</a></li>
+								    </ul>
+								    <input class="form-control form-width order-customer-employee" readonly value="欧阳少华"   type="text" style="width:150px;text-align: center;">
+								</div>
+							</div>
+						</div>
+		        	</td>
+		        </tr>
+		        <tr>
+		        	<td>
+		        		<div class="form-group order-pay-money">
+						    <div class="input-group routeproduct-time">
+						      	<div class="input-group-addon">结算金额</div>
+						        <input class="form-control form-width customer-add-money" readonly  type="text" style="width:120px;"><span class="order-danwei">元&nbsp;&nbsp;<button class="btn btn-primary change-money" type="button">自定义</button></span>
+						        <span class="validate-info"></span>
+						    </div>
+						</div>
+		        	</td>
+		        </tr>
+	      	</tbody>
+	    </table>
+	    <div class="footer">
+	    	<button type="button" class="btn btn-primary orderAdd-submit">提交审核</button>
+	    </div>
+    </div>
+	
+	
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>	
+	<script type="text/javascript" src="js/public.js"></script>
+	<script type="text/javascript" src="js/validate.js"></script>
+	<script type="text/javascript" src="js/orderAdd.js"></script>
+</body>
+</html>

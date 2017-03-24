@@ -1,0 +1,75 @@
+.search-container>input{
+	background: transparent;
+}
+.flow-container{
+	margin-top: -4px;
+	background: rgba(255,255,255,0.5);
+}
+.pro-info{
+	width: 70%;
+	margin: 0 auto;
+	border-left: 1px solid #2e3033;
+	border-right: 1px solid #2e3033;
+	background: rgba(255,255,255,0.8);
+	color: #2e3033;
+}
+.pro-info-title h5{
+	text-align: center;
+	padding: 10px;
+	border-bottom: 2px solid #2e3033;
+	font-weight: normal;
+}
+.pro-info-title{
+	position: relative;
+}
+.main-list-item>li{
+	margin-bottom: 20px;
+}
+.main-list-item>li:last-child{
+	margin-bottom: 10px;
+}
+.main-list-item>li>span{
+	display: inline-block;
+	width: 140px;
+	margin-left: 5px;
+}
+.main-list-item>li>span:nth-of-type(1){
+	display: inline-block;
+	text-align: right;
+	vertical-align: top;
+	width: 82px;
+}
+input,select{
+	width: 147px;
+	height: 25px;
+	background: rgba(228,228,228,0.5);
+	border: 1px solid #797979;
+	padding-left: 5px;
+	margin-right: 5px;
+	box-sizing: border-box;
+}
+.main-item-loc input{
+	width: 316px;
+}
+input[type="radio"]{
+	height: 18px;
+	width: 18px;
+	position: relative;
+	top: 2px;
+	margin-right: 5px;
+}
+input[type="checkbox"]{
+	height: 15px;
+	width: 15px;
+}
+#select-city{
+	width: auto;
+	position: relative;
+	left: -5px;
+}
+textarea{
+	width: 500px;
+	height: 150px;
+	background: rgba(228,228,228,0.5);
+	border: 1px solid #797979;
+}

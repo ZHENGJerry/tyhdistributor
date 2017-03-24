@@ -1,0 +1,19 @@
+.pro-num-btn{
+	position: absolute;
+	right: 20px;
+	top: 15px;
+}
+.sel-all{
+	margin-left: 40px;
+}
+.pro-title>div{
+	padding: 10px 0;
+}
+.pro-title label{
+	margin: 0 10px;
+}
+.bd-num,.dd-num{
+	width: 150px;
+	font-size: 12px;
+	height: 30px;
+}

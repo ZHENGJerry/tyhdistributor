@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="tyhdistributor:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="TYH_DistributorControl.war">
+      <element id="artifact" artifact-name="tyhdistributor:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,154 @@
+body{
+	font-family:'hiragino sans gb','PingFangSC-Medium','微软雅黑';
+}
+.main-wrap h1{
+	font-size:16px;
+	font-weight:500;
+}
+.con-list{
+	width: 100%;
+	border-bottom: 1px solid #797979;
+}
+.con-list:after{
+	clear: both;
+	display: block;
+	content: "";
+}
+.con-list-title{
+	width: 60px;
+	float: left;
+	text-align: center;
+	padding: 10px 0;
+}
+.con-list-title>span{
+	display: inline-block;
+	background: #169bd5;
+	color: #fff;
+	width: 36px;
+	padding: 30px 10px;
+	border-radius: 5px
+}
+.con-list-detail{
+	width: 880px;
+	float: right;
+	padding: 10px;
+	border-left: 1px solid #797979;
+	min-height: 165px;
+}
+/*基本信息*/
+div[class^="bsinfo"]{
+	padding: 5px 0;
+	font-size: 13px;
+}
+input{
+	height: 30px;
+}
+div[class^="bsinfo"]>label{
+	margin-right: 25px;
+	margin-left: 20px;
+	font-size: 16px;
+}
+.bsinfo-list{
+
+}
+.bsinfo-list span{
+	display: inline-block;
+	line-height: 30px;
+	width: 150px;
+	height: 32px;
+	text-align: center;
+	border: 1px solid #a9a9a9;
+}
+.bsinfo-list input{
+	padding: 0 10px;
+	outline: none;
+}
+.bsinfo-list .list-sel{
+	background: #ff0000;
+}
+.bsinfo-name .bsif-n-name{
+	width: 388px;
+}
+.bsinfo-name .bsif-n-num{
+	width: 118px;
+}
+.bsinfo-per select,.bsinfo-date input,.bsinfo-price input{
+	width: 70px;
+}
+#sel-city{
+	min-width: 154px;
+}
+
+/*产品详情*/
+.pro-detail .con-list-detail{
+	padding: 0;
+}
+.pro-detail tr{
+	height: 50px;
+	border-bottom: 1px dashed #797979;
+}
+.pro-detail tr td{
+	padding: 0 10px;
+}
+.pro-detail tr td input[type="text"]{
+	font-size: 14px;
+	width: 100%;
+}
+.bx-xm{
+	width: 210px;
+}
+.bx-je{
+	width: 130px;
+	border-left: 1px solid #797979;
+	border-right: 1px solid #797979;
+}
+.bx-range{
+	width: 540px;
+	position: relative;
+}
+.pro-detail .bx-range input[type="text"]{
+	width: 420px;
+}
+.pro-detail tr:nth-of-type(1){
+	text-align: center;
+}
+.pro-detail tr select{
+	width: 190px;
+}
+.pro-add,.delbx-xm{
+	position: absolute;
+	right: 20px;
+	top: 10px;
+}
+input[class^="pro-add-"]{
+	position: absolute;
+	padding: 0 5px;
+	top: 10px;
+}
+.pro-add-ok{
+	right: 60px;
+}
+.pro-add-del{
+	right: 10px;
+}
+
+/*须知*/
+.con-list-detail textarea{
+	width: 860px;
+	min-height: 145px;
+}
+
+/*提交审核*/
+.submit{
+	padding: 20px 0;
+	text-align: center;
+}
+.submit input{
+	width: 320px;
+	height: 40px;
+	background: #dc408c;
+	color: #fff;
+	border: none;
+	outline: none;
+	border-radius: 2px;
+}

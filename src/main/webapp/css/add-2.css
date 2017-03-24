@@ -1,0 +1,137 @@
+*{
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	font-family:'hiragino sans gb','PingFangSC-Medium','微软雅黑';
+}
+.main-wrap{
+	width: 940px;
+	margin: 0 auto;
+	background: #f2f2f2;
+}
+table{
+	width: 100%;
+}
+h2{
+	text-align: center;
+	padding: 20px;
+	font-weight: bolder;
+}
+tr{
+	display: block;
+	border-top: 1px solid #797979;
+}
+td{
+	text-align: center;
+	padding: 10px 0;
+	color: #333333;
+}
+.col-1{
+	width: 60px;
+	border-right: 1px solid #000;
+	padding: 0 10px;
+}
+.col-1 span{
+	display: inline-block;
+	width: 40px;
+	background: #169bd5;
+	padding: 30px 10px;
+	color: #fff;
+	border-radius: 10px;
+}
+.col-2{
+	width: 880px;
+	padding: 10px;
+	font-size: 12px;
+}
+ul{
+	margin-bottom: 10px;
+}
+ul:after{
+	display: block;
+	clear: both;
+	content:"";
+}
+li{
+	list-style: none;
+	float: left;
+	margin-right: 20px;
+}
+li span{
+	display: inline-block;
+	background: #fff;
+	padding: 5px 0;
+	border: 1px solid #787878;
+}
+li span:nth-of-type(1){
+	width: 100px;
+	background: transparent;
+	border: none;
+}
+.li-sel span{
+	background: transparent;
+	border: none;
+	width: 100px;
+	text-align: left;
+}
+.li-sel span:nth-of-type(1){
+	display: inline-block;
+
+	padding: 5px 0;
+	margin-right: 0;
+	text-align: center;
+}
+li select{
+	padding: 4px 0;
+	display: inline-block;
+}
+input[type="text"]{
+	padding: 4px;
+}
+input[type="radio"],input[type="checkbox"]{
+	margin-right: 5px;
+	height: 12px;
+}
+.short-inp{
+	width: 40px;
+}
+#getid{
+	background: #169bd5;
+	color: #fff;
+	border-radius: 5px;
+	padding: 5px 30px;
+	border: none;
+}
+.text{
+	width: 860px;
+	height: 150px;
+	margin: 0;
+}
+footer{
+	text-align: center;
+	border-top: 1px solid #797979;
+	padding: 15px 0;
+}
+footer input{
+	padding: 10px 0;
+	border: 1px solid #797979;
+	background: #fff;
+	border-radius: 5px;
+	width: 150px;
+}
+option{
+	width: 100px;
+}
+.pro-info input{
+	width: 730px;
+}
+.li-date input,.li-num input{
+	margin-right: 5px;
+}
+.li-num input:nth-of-type(2){
+	margin-left: 20px;
+}

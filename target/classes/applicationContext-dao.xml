@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx.xsd
+http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc.xsd
+http://www.springframework.org/schema/util
+http://www.springframework.org/schema/util/spring-util.xsd">
+	<!--******************** 2017.3.10添加************************************************************************* -->
+	<context:component-scan base-package="cn.tongyouhui.control.dao,cn.tongyouhui.service"></context:component-scan>
+	<!-- ******************************************************************** -->
+	<!-- 读取properties文件 -->
+	<context:property-placeholder location="classpath:*.properties"/>
+	<!-- 配置数据源 -->
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+		<property name="driverClassName" value="${jdbc.driver}"></property>
+		<property name="url" value="${jdbc.url}"></property>
+		<property name="username" value="${jdbc.username}"></property>
+		<property name="password" value="${jdbc.password}"></property>
+		<!-- <property name="driverClassName" value="jdbc:mysql://localhost:3306/tongyouhui?characterEncoding=utf-8"></property>
+		<property name="url" value="com.mysql.jdbc.Driver"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="123"></property> -->
+	</bean>
+	<!-- 配置sqlSessionFactory工厂 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<!-- 配置别名 -->
+		<property name="typeAliasesPackage" value="cn.tongyouhui.comtrol.vo"></property>
+		<property name="configLocation" value="classpath:sqlMapConfig.xml"></property>
+	</bean>
+	<!-- 配置映射文件扫描 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="cn.tongyouhui.control.dao"></property>
+		<!-- 
+			1、延迟加载sqlSessionFactory
+			2、多数据库实例（每一个数据库都有一个工厂），指定数据工厂
+		 -->
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+	</bean>
+	
+	
+</beans>

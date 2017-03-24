@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>账号管理-员工管理</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/staffManage.css">
+</head>
+<body>
+	<div id="main-wrap">
+		<h5>员工管理</h5>
+		<div class="main-menu">
+			<ul>
+				<li class="select" id="select-info">查看信息</li>
+				<li id="add-bm">添加部门</li>
+				<li id="add-staff">添加员工</li>
+				<li id="del-staff">删除员工</li>
+				<li id="change-bm">部门调动</li>
+			</ul>
+		</div>
+		<div id="detail-wrap">
+			<div class="detail-left">
+				<div class="left-head">天津市同游会科技有限公司</div>
+				<ul class="bm-list"></ul>
+				<div class="bm-total">
+					<!-- <div class="add-bm add-select">
+						<p class="bm-detail">运营一部</p>
+						<span class="add-bm-del" style="display: none;">×</span>
+					</div>
+					<div class="add-bm">
+						<p class="bm-detail">运营二部</p>
+						<span class="add-bm-del" style="display: none;">×</span>
+					</div> -->
+				</div>
+			</div>
+			<div class="detail-right">
+				<div class="add">
+					<div class="right-head">员工信息</div>
+				</div>
+				<div class="detail-right-bottom">
+					<div class="staff-info-del" style="display: none;">
+						<ul class="add-bm-name">
+							<input type="text" class="form-control add-bm-info" placeholder="请输入部门名称" >
+							<span class="add-bm-ok">√</span>
+							<span class="add-bm-del">×</span>
+						</ul>
+					</div>
+					<div class="staff-total">
+						<!-- <ul class="staff-info">
+							<li>
+								<input type="checkbox" class="s-info-selt">
+								<span class="s-info-num">1</span>
+								<span class="s-info-name">欧阳少华</span>
+								<span  class="s-info-email" style="text-align: center;">1234567890@163.com</span>
+								<span class="s-info-tel">12345678901</span>
+								<span class="s-info-job">境内部主管</span>
+								<span class="s-info-btn">
+									<input type="button" class="" value="配置" disabled>
+								</span>
+							</li>
+						</ul>
+						<ul class="staff-info">
+							<li>
+								<input type="checkbox" class="s-info-selt">
+								<span class="s-info-num">2</span>
+								<span class="s-info-name">欧阳少华</span>
+								<span  class="s-info-email" style="text-align: center;">1234567890@163.com</span>
+								<span class="s-info-tel">12345678901</span>
+								<span class="s-info-job">境内部主管</span>
+								<span class="s-info-btn">
+									<div class="btn-group" role="group">
+								        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:120px;">
+								       		<span class="bChange">部门调动</span><span class="caret"></span>
+									    </button>
+									    <ul class="dropdown-menu bn-xg">
+									        <li><a>部门调动</a></li>
+									        <li><a>运营一部</a></li>
+									        <li><a>我的支出</a></li>
+									    </ul>
+									</div>
+								</span>
+							</li>
+						</ul> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/public.js"></script>
+	<script type="text/javascript" src="js/validate.js"></script>
+	<script type="text/javascript" src="js/staffManage.js"></script>
+</body>
+</html>

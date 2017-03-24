@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>保险产品添加</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/bx-add.css">
+</head>
+<body>
+	<div class="main-wrap">
+		<h1>保险产品添加</h1>
+		<div class="main-con">
+			<div class="con-list basic-info">
+				<div class="con-list-title">
+					<span>基本信息</span>
+				</div>
+				<div class="con-list-detail">
+					<div class="bsinfo-list">
+						<label for="">产品分类</label>
+						<span>旅游意外保险</span>
+						<input type="button" value="旅游意外保险" class="list-sel">
+						<input type="button" value="户外旅行意外保险">
+						<input type="button" value="航班延误保险">
+					</div>
+					<div class="bsinfo-name">
+						<label for="">产品名称</label>
+						<input type="text" class="bsif-n-name">
+						<label for="">产品编号</label>
+						<input type="text" class="bsif-n-num">
+						<input type="button" value="获取产品编号">
+					</div>
+					<div class="bsinfo-per">
+						<label for="">适用人群</label>
+						<select name="" id="">
+						</select>
+						<span>---</span>
+						<select name="" id="">
+						</select>
+						<span>周岁</span>
+					</div>
+					<div class="bsinfo-date">
+						<label for="">保险期限</label>
+						<input type="text">
+						<span>天</span>
+					</div>
+					<div class="bsinfo-range">
+						<label for="">适用范围</label>
+						<select name="" id="msel">
+							<option value="">中国大陆(港澳台除外)</option>
+							<option value="">中国境内(含港澳台)</option>
+							<option value="">中国境外</option>
+						</select>
+						<span style="display:none;">
+							<select name="" id="sel-range">
+								<option>不限地区</option>
+								<option>亚洲</option>
+								<option>欧洲</option>
+								<option>美洲</option>
+							</select>
+							<select name="" id="sel-city">
+								<option value="">不限国家</option>
+							</select>
+						</span>
+					</div>
+					<div class="bsinfo-price">
+						<label for="">产品价格</label>
+						<input type="text">元/人/天
+					</div>
+				</div>
+			</div>
+			<div class="con-list pro-detail">
+				<div class="con-list-title">
+					<span>产品详情</span>
+				</div>
+				<div class="con-list-detail">
+					<table>
+						<tr>
+							<td class="bx-xm">保障项目</td>
+							<td class="bx-je">保障金额</td>
+							<td class="bx-range">
+								保障范围
+								<input type="button" value="添加" class="pro-add">
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="con-list bx-reserve">
+				<div class="con-list-title">
+					<span>预订须知</span>
+				</div>
+				<div class="con-list-detail">
+					<textarea placeholder="请输入预订须知"></textarea>
+				</div>
+			</div>
+			<div class="con-list bx-use">
+				<div class="con-list-title">
+					<span>使用须知</span>
+				</div>
+				<div class="con-list-detail">
+					<textarea placeholder="请输入使用须知"></textarea>
+				</div>
+			</div>
+		</div>
+
+		<div class="submit">
+			<input type="submit" value="提交审核">
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/bx-add.js"></script>
+</body>
+</html>

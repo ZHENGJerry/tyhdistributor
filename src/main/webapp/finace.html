@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>财务管理</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/finace.css">
+</head>
+<body>
+	<div id="routeproduct-title">
+		<h1>财务管理</h1>
+	</div>
+
+	<div id="routeproduct">
+		<div class="routeproduct-top">
+			<for m class="form-inline" role="form">
+				<div class="btn-group finace" role="group">
+				    <button type="button" class="btn btn-default finace-income">产品类型</button>
+				    <div class="btn-group" role="group">
+				        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:100px;">
+				       		<span class="income-outcome">全部</span><span class="caret"></span>
+					    </button>
+					    <ul class="dropdown-menu finace-income-state">
+					        <li><a>全部</a></li>
+					        <li><a>我的收入</a></li>
+					        <li><a>我的支出</a></li>
+					    </ul>
+					</div>
+				</div>
+				<div class="btn-group finace" role="group" style="margin-left:67px;">
+				    <button type="button" class="btn btn-default finace-type">收支状态</button>
+				    <div class="btn-group" role="group">
+				        <button type="button" style="width:100px;" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				       		<span class="finace-type-state-replace">全部</span><span class="caret"></span>
+					    </button>
+					    <ul class="dropdown-menu finace-type-state">
+					        <li><a>全部订单</a></li>
+					        <li><a>系统订单</a></li>
+					        <li><a>自拟订单</a></li>
+					    </ul>
+					</div>
+				</div>
+				<div class="form-group finace" style="margin-left:67px;">
+				    <div class="input-group routeproduct-time">
+				      	<div class="input-group-addon">选择时间</div>
+				        <input class="form-control form-width form-control-time form-control-from-time" type="text">
+				        <span class="routeproduct-line">--</span>
+				        <input class="form-control form-width form-control-time form-control-to-time" type="text">
+				    </div>
+				</div>
+				<!-- <div class="form-group finace" >
+				    <div class="input-group routeproduct-time">
+				      	<div class="input-group-addon">分销商</div>
+				        <input class="form-control form-width form-control-time form-phone" type="text" placeholder="请输入电话号码">
+				        <input class="form-control form-width form-control-time form-userid" type="text" placeholder="请输入ID">
+				    </div>
+				</div>
+				<div class="btn-group finace" role="group" >
+				    <div class="btn-group" role="group">
+				        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:280px;">
+				       		<span class="form-fenxiaoshang">全部分销商</span><span class="caret"></span>
+					    </button>
+					    <ul class="dropdown-menu finace-distribution-state">
+					        <li><a>全部分销商</a></li>
+					        <li><a>天津市红桥区同游会</a></li>
+					    </ul>
+					</div>
+				</div>
+				<div class="btn-group finace" role="group">
+				    <button type="button" class="btn btn-default finace-settlment">结款状态</button>
+				    <div class="btn-group" role="group">
+				        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:100px;">
+				       		<span class="finace-settlment-state-click">全部</span><span class="caret"></span>
+					    </button>
+					    <ul class="dropdown-menu finace-settlment-state">
+					        <li><a>全部</a></li>
+					        <li><a>已结款</a></li>
+					        <li><a>未结款</a></li>
+					    </ul>
+					</div>
+				</div>
+				<br>
+				<div class="btn-group finace" role="group">
+				    <button type="button" class="btn btn-default finace-employee">公司员工</button>
+				    <div class="btn-group" role="group">
+				        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:80px;">
+				       		<span class="finace-employee-state-click">001</span><span class="caret"></span>
+					    </button>
+					    <ul class="dropdown-menu finace-employee-state" style="min-width:60px;">
+					        <li><a>001</a></li>
+					        <li><a>002</a></li>
+					        <li><a>003</a></li>
+					    </ul>
+					</div>
+				</div>
+				<div class="input-group finace">
+				    <input type="text" class="form-control employee-name" value="欧阳少华" readonly aria-describedby="basic-addon1">
+				</div> -->
+				
+			<!-- </form> </div> -->
+			<button type="button" class="btn btn-primary finace-search">查询</button> 
+		
+		
+		<div id="finace-middle">
+			
+			<p class="finace-order">共计有&nbsp;&nbsp;&nbsp;<span>120</span>&nbsp;&nbsp;&nbsp;个订单</p>
+			<div class="finace-select">
+				<input type="checkbox" class="finace-order-select" style="position: relative;top:2px;">&nbsp;&nbsp;选择全部
+			</div>
+			<br>
+			<p class="finace-totle-income">收入总计&nbsp;&nbsp;&nbsp;<span>12345678</span>&nbsp;&nbsp;&nbsp;元</p>
+			<p class="finace-totle-out">支出总计&nbsp;&nbsp;&nbsp;<span>12345678</span>&nbsp;&nbsp;&nbsp;元</p>
+			<button type="button" class="btn btn-primary finace-export">导出Excel结果</button>
+		</div>
+		
+		<table class="table table-hover table-routeproduct table-inquery" id="table" style="table-layout:fixed">
+			<caption>
+				<h3>查询结果</h3>
+			</caption>
+	      	<thead class="routeproduct-inquire-thead">
+		        <tr>
+		            <th class="finace-serial">序号</th>
+		            <th class="finace-num">订单号</th>
+		            <th class="finace-product">产品名称</th>
+		            <th class="finace-username">联系人</th>
+		            <th class="finace-tellphone">联系电话</th>
+		            <th class="finace-account">数量</th>
+		            <th class="finace-money">金额</th>
+		            <th class="finace-income-detail">收入</th>
+		            <th class="finace-out-detail">支出</th>
+		            <th class="finace-detail">详情</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		        <tr>
+		          	<td class="finace-serial arial-sans"><label class="finace-xuhao"><input type="checkbox" class="finace-xh-select">&nbsp;001</label></td>
+		         	<td class="finace-num arial-sans">120120001001</td>
+		         	<td class="finace-product">泰国曼谷普吉岛至尊帝皇五晚七日游发答案是否打算</td>
+		          	<td class="finace-username arial-sans">欧阳少华</td>
+		          	<td class="finace-tellphone">15822455770</td>
+		          	<td class="finace-account">50人</td>
+		          	<td class="finace-money">12345元</td>
+		          	<td class="finace-income-detail">12345元</td>
+		          	<td class="finace-out-detail">12345元</td>
+		          	<td class="finace-detail"><button type="button" class="btn btn-primary">详情</button></td>
+		        </tr>
+		        <tr>
+		          	<td class="finace-serial arial-sans"><label class="finace-xuhao"><input type="checkbox" class="finace-xh-select">&nbsp;002</label></td>
+		         	<td class="finace-num arial-sans">120120001001</td>
+		         	<td class="finace-product">泰国曼谷普吉岛至尊帝皇五晚七日游发答案是否打算</td>
+		          	<td class="finace-username arial-sans">欧阳少华</td>
+		          	<td class="finace-tellphone">15822455770</td>
+		          	<td class="finace-account">50人</td>
+		          	<td class="finace-money">12345元</td>
+		          	<td class="finace-income-detail">12345元</td>
+		          	<td class="finace-out-detail">12345元</td>
+		          	<td class="finace-detail"><button type="button" class="btn btn-primary">详情</button></td>
+		        </tr>
+	      	</tbody>
+	    </table>
+    </div>
+	
+	
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>	
+	<script type="text/javascript" src="js/public.js"></script>
+	<script type="text/javascript" src="js/finace.js"></script>
+</body>
+</html>

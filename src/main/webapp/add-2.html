@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>签证添加页面02</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/add-2.css">
+</head>
+<body>
+	<div class="main-wrap">
+		<table cellspacing="0" cellpadding="0">
+			<h2>签证产品添加</h2>
+			<tr>
+				<td class="col-1"><span>基本信息</span></td>
+				<td class="col-2">
+					<ul>
+						<li>
+							<span>签证类型</span>
+							<select name="" id="">
+								<option value="">个人旅游签证</option>
+								<option value="">个人旅游签证</option>
+								<option value="">个人旅游签证</option>
+							</select>
+						</li>
+						<li>
+							<span>选择地区</span>
+							<select name="" id="mysel">
+								<option value="">亚洲</option>
+								<option value="">欧洲</option>
+								<option value="">非洲</option>
+								<option value="">大洋洲</option>
+								<option value="">北美洲</option>
+								<option value="">南美洲</option>
+
+							</select>
+						</li>
+						<li>
+							<span>选择国家</span>
+							<select name="" id="arial">
+							</select>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<span>产品名称</span>
+							<input type="text" placeholder="例：法国个人旅游签证">
+						</li>
+						<li>
+							<span>产品编号</span>
+							<input type="text" placeholder="1234567890">
+							<input type="button" value="获取产品编号" id="getid">
+						</li>
+					</ul>
+					<ul>
+						<li class="pro-info">
+							<span>产品简介</span>
+							<input type="text" placeholder="输入产品简介，不超过50字" maxlength="50">
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<span>办理时长</span>
+							收齐材料后需要<input type="text" placeholder="1" class="short-inp">个工作日
+						</li>
+					</ul>
+					<ul>
+						<li class="li-num">
+							<span>入境次数</span>
+								<input type="text" placeholder="1" class="short-inp">次
+								<input type="radio" name="num">多次
+								<input type="radio" name="num">以使馆签发为准
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<span>签证有效期</span>
+							<select name="" id="">
+								<option value="">2</option>
+								<option value="">2</option>
+								<option value="">2</option>
+							</select>
+							<select name="" id="">
+								<option value="">个月</option>
+								<option value="">年</option>
+							</select>
+						</li>
+					</ul>
+					<ul>
+						<li class="li-date">
+							<span>可停留天数</span>
+							<input type="text" placeholder="30" class="short-inp">天（以使馆签发为准）
+						</li>
+					</ul>
+					<ul>
+						<li class="li-sel">
+							<span>是否需要面签</span>
+							<span><input type="radio" name="mqian">需要面签</span>
+							<span><input type="radio" name="mqian">不需要面签</span>
+						</li>
+					</ul>
+					<ul>
+						<li class="li-sel">
+							<span>是否需要销签</span>
+							<span><input type="radio" name="mqian">需要销签</span>
+							<span><input type="radio" name="mqian">不需要销签</span>
+						</li>
+					</ul>
+					<ul>
+						<li class="li-sel">
+							<span>是否需要录指纹</span>
+							<span><input type="radio" name="mqian">需要录指纹</span>
+							<span><input type="radio" name="mqian">不需要录指纹</span>
+						</li>
+					</ul>
+					<ul>
+						<li class="li-sel">
+							<span>适用身份</span>
+							<span><input type="checkbox" name="mqian">在职人员</span>
+							<span><input type="checkbox" name="mqian">退休人员</span>
+							<span><input type="checkbox" name="mqian">在校学生</span>
+							<span><input type="checkbox" name="mqian">自由职业者</span>
+							<span><input type="checkbox" name="mqian">学龄前儿童</span>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<span>受理范围</span>
+						</li>
+					</ul>
+					<div>
+						<textarea class="text"></textarea>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<footer>
+			<a href="add2-link.html"><input type="button" value="下一步"></a>
+		</footer>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/add-2.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+[core]
+	bare = true
+	repositoryformatversion = 0
+	filemode = false
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = git@101.201.73.137:/home/ravenwu/repository/tyhdistributor.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+	puttykeyfile = kawayi2010
+	pushurl = git@101.201.73.137:/home/ravenwu/repository/tyhdistributor.git

@@ -1,0 +1,77 @@
+*{
+	font-family:'hiragino sans gb','PingFangSC-Medium','微软雅黑';
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+input[type="button"]{
+	background: #169bd5;
+	color: #fff;
+	border-radius: 5px;
+	border: none;
+	height: 30px;
+	padding: 0 20px;
+	line-height: 30px;
+	outline: none;
+	cursor:pointer;
+}
+select{
+	height: 30px;
+}
+.main-wrap{
+	width: 940px;
+	margin: 0 auto;
+}
+h1{
+	font-size: 16px;
+	text-align: center;
+	padding: 20px;
+	font-weight: 500;
+	background: #f2f2f2;
+	border-bottom: 1px solid #797979;
+}
+span{
+	display: inline-block;
+}
+input[type="checkbox"]{
+	width: 20px;
+	height: 20px;
+	position: relative;
+	top: 4px;
+}
+input[type="text"]{
+	height: 30px;
+}
+
+
+.pro-title,.pro-num{
+	padding: 15px;
+	border-bottom: 1px solid #797979;
+	position: relative;
+}
+.pro-title label{
+	margin-right: 20px;
+}
+.pro-title .pro-t-search{
+	position: absolute;
+	right: 20px;
+	bottom: 15px;
+	padding: 0 50px;
+}
+/*产品数量*/
+.pro-num>span>span{
+	width: 80px;
+	text-align: center;
+}
+
+/*产品信息*/
+.pro-pro table{
+	width: 940px;
+}
+.pro-pro table tr{
+	height: 50px;
+	border-bottom: 1px solid #797979;
+}
+.pro-pro td{
+	text-align: center;
+}

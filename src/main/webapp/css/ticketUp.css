@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+body{
+	font-family:'hiragino sans gb','PingFangSC-Medium','微软雅黑';
+}
+
+.addTicket table td,.addTicket table th{
+	text-align: center;
+	border: 1px solid #ccc;
+	padding: 5px;
+}
+
+.addTicket table.inner_tbl{
+	width: 100%;
+}
+
+.addTicket table.inner_tbl td{
+	border: none;
+	/*padding: 0;*/
+	
+}
+
+
+/*collect-info.html的css样式表*/
+#info{
+	width:940px;
+	margin:0 auto;
+	/*height:500px;*/
+}
+#info .info-intro thead th{
+	text-align: center;
+}
+#info .info-middle{
+	vertical-align: middle;
+	text-align: center;
+}
+#info .btn-not-pass{
+	margin-top: 10px;
+}
+#info .info-audit,
+#info .info-role{
+	width:130px;
+}
+#info .info-intro tbody .info-color{
+	border-top:3px solid #ccc;
+}
+
+

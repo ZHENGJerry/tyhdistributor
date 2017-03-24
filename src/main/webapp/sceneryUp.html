@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加景点信息</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/publicUp.css">
+	<link rel="stylesheet" href="css/sceneryUp.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/ssi-uploader.min.css">
+</head>
+<body>
+    <header class="text-center">
+	    <h1>景点信息添加</h1>
+    </header>	
+    <section class="basedInfo clearfix" >
+    	    <h3>基本信息</h3>
+	    <!-- <div class="line-ver"></div> -->
+	    <div class="basedInfo_container right form-inline">
+		    <div class="name">
+			    <label class="span_type">景点名称</label>
+			    <input type="text" class="input_name form-control" placeholder="请填写景点名称">
+		    </div>
+		    <div class="site">
+			    <label class="span_type">景点地址</label>
+			    <input type="text" class="input_site form-control" style="width: 650px;" placeholder="请填写详细地址">
+		    </div>
+		    <div class="tel">
+			    <label class="span_type">联系电话</label>
+			    <input type="text" class="input_tel form-control" placeholder="请填写有效电话">
+		    </div>
+		    <div class="open">
+			    <label class="span_type">营业时间</label>
+			    <input type="text" class="input_open_start form-control" placeholder="例 8：00">
+			    -
+			    <input type="text" class="input_open_start form-control" placeholder="例 22：00">
+		    </div>
+	    </div>
+    </section>
+    <section class="briefInfo clearfix" >
+	    <h3>景点简介</h3>
+	    <textarea name="" id="" cols="30" rows="5" class="right"></textarea>
+    </section>
+    <section class="img_upload clearfix page1" >
+	    <h3 style="margin-top: -63.5px;">上传景点图</h3>
+	    <div class="right form-inline">
+		       <span class="span_advice">建议尺寸：320px*320px，最多传6张</span>
+		       <div class="imgUpload_container">
+		           <input type="file" id="ssi-upload">
+		       </div>
+	    </div>
+    </section>
+
+    <footer class="page3">
+        <a href="#" class="btn_default btn_page">返回</a>
+    	<a href="javascript:;" class="ticket_submit _submit">提交审核</a>
+    </footer>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/sceneryUp.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>	
+<script type="text/javascript" src="js/ssi-uploader.js"></script>
+
+<script type="text/javascript">
+    $('#ssi-upload').ssi_uploader({url:'#',maxFileSize:6,dropZone:false,allowed:['jpg','gif','txt','png','pdf']});
+    // $('#ssi-upload2').ssi_uploader({url:'#',maxFileSize:6,dropZone:false,allowed:['jpg','gif','txt','png','pdf']});
+    // $('#ssi-upload3').ssi_uploader({url:'#',maxFileSize:6,dropZone:false,allowed:['jpg','gif','txt','png','pdf']});
+    // $('#ssi-upload4').ssi_uploader({url:'#',maxFileSize:6,dropZone:false,allowed:['jpg','gif','txt','png','pdf']});
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+.flow-container{
+	margin-top: -4px;
+	background: rgba(255,255,255,0.5);
+}
+.pro-info{
+	width: 70%;
+	margin: 0 auto;
+	border-left: 1px solid #2e3033;
+	border-right: 1px solid #2e3033;
+	background: rgba(255,255,255,0.8);
+}
+.pro-info-title h5{
+	text-align: center;
+	padding: 10px;
+	border-bottom: 2px solid #2e3033;
+	font-weight: normal;
+}
+.main-list{
+	padding: 10px;
+	border-bottom: 2px solid #81898e;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	position: relative;
+}
+.main-list-pic{
+	width: 25%;
+}
+.main-list-price{
+	bottom: 60px;
+}
+.main-list-price h4{
+	color: #000;
+}
+.toPay{
+	position: absolute;
+	right: 10px;
+	bottom: 30px;
+}
+.info-name>span,.info-num>span,.info-date>span,.info-locat>span{
+	margin: 0 5px;
+}
+.price-detail{
+	display: inline-block;
+	color: #df4297;
+	margin-top: 5px;
+}

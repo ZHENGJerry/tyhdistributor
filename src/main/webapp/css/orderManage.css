@@ -1,0 +1,247 @@
+@charset "utf-8";
+
+body{
+	font-size:14px;
+	font-family:'hiragino sans gb','PingFangSC-Medium','微软雅黑';
+}
+
+#routeproduct .form-group .form-width{
+	width:125px;
+}
+.form-control{
+	font-size: 13px;
+}
+.btn-group .caret{
+	margin-top: 9px!important;
+	float:right!important;
+}
+.btn{
+	padding:2px 6px;
+}
+.btn-primary,.btn-primary:visited,.btn-primary:hover,.btn-primary:focus{
+	background: #0ab2cc!important;
+	border-color:#0ab2cc!important;
+}
+#routeproduct-title{
+	margin:0 auto;
+	width:940px;
+	text-align: center;
+	position: relative;
+}
+#routeproduct-title h1{
+	font-size:16px;
+	margin:10px 0;
+	/*color:red;*/
+}
+#routeproduct{
+	width:940px;
+	height:500px;
+	margin:0 auto;
+}
+#routeproduct .table-routeproduct {
+	margin:2px 0 0 0;
+}
+#routeproduct .table-routeproduct caption{
+	width:100%;
+	height:35px;
+	background: #E8E8E8;
+	position: relative;
+	text-align: center;
+	padding:0;
+	border-radius: 4px;
+    box-shadow: 0 2px 2px #ccc;
+}
+#routeproduct .table-routeproduct caption h3{
+	height:35px;
+	line-height:35px;
+	color:#000;
+	font-weight: bold;
+	letter-spacing:1.5px;
+	font-size:15px;
+}
+#routeproduct .table-routeproduct caption .routeproduct-export{
+	position: absolute;
+	top:5px;
+	right: 15px;
+    padding: 2px 4px;
+}
+#routeproduct .table-routeproduct thead{
+	border-top:2px solid #e7e7e7;
+	background: #E8E8E8;
+}
+#routeproduct .table-routeproduct tbody{
+	border-bottom:2px solid #e7e7e7;
+}
+#routeproduct .table-routeproduct thead tr th,
+#routeproduct .table-routeproduct tbody tr td,
+#routeproduct .table-routeproduct tbody tr td input{
+	text-align: center;
+	vertical-align:middle;
+}
+#routeproduct .table-routeproduct tbody tr td{
+	height:50px;
+}
+#table .order-serial{
+	width:60px;
+}
+#table .order-num{
+	width:120px;
+}
+#table .order-product{
+	width:230px!important;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+#table .order-username{
+	width:75px;
+}
+#table .order-tellphone{
+	width:110px;
+}
+#table .order-account{
+	width:50px;
+}
+#table .order-money{
+	width:72px;
+}
+#table .order-income-detail{
+	width:72px;
+}
+#table .order-out-detail{
+	width:65px;
+}
+#table .order-detail{
+	width:80px;
+}
+#table .finace-xuhao{
+	font-weight: normal;
+	margin-bottom: 0;
+}
+#table .finace-xh-select{
+	display: inline-block;
+	width:15px;
+	height:15px;
+	margin-top:-2px;
+}
+.order-detail .dropdown-menu{
+	min-width:70px;
+}
+.order-detail .dropdown-menu li a:hover{
+	cursor: pointer;
+}
+/*orderManage.html的样式*/
+#routeproduct .input-group-addon{
+	width:78px;
+}
+#routeproduct .finace{
+	margin-top: 10px;
+	margin-left: 15px;
+}
+.input-group-addon{
+	padding:6px;
+	font-size:13px;
+}
+#routeproduct .routeproduct-top{
+	width:940px;
+	height:150px;
+	background: #F2F4F5;
+	border-radius:4px;
+}
+#routeproduct .routeproduct-top .finace .btn{
+	height:34px;
+	font-size:13px;
+	background-color: #eee;
+	color: #555;
+}
+#routeproduct .routeproduct-top .finace .dropdown-menu li a:hover{
+	cursor: pointer;
+}
+
+
+
+#routeproduct .order-tuanqi,
+/*#routeproduct .order-statue{
+	margin-left: 50px;
+}*/
+#routeproduct .order-num{
+	margin-left: -20px;
+}
+#routeproduct .order-employee{
+	margin-left: 36px;
+}
+#routeproduct .routeproduct-top .finace .employee-name{
+	border-radius: 4px;
+	width:120px;
+}
+.routeproduct-line{
+	position: relative;
+	top:7px;
+	left:-139px;
+}
+#routeproduct .routeproduct-top .form-phone,
+#routeproduct .routeproduct-top .form-control-from-time{
+	margin-right: 15px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+#routeproduct .routeproduct-top .form-userid,
+#routeproduct .routeproduct-top .form-control-to-time{
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+#routeproduct .routeproduct-top .finace .order-identify{
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+#routeproduct .finace-search{
+    padding: 2px 4px;
+    margin-left: 740px;
+    margin-top: -56px;
+    width:110px;
+}
+/*#routeproduct .order-travel{
+	margin-left: 36px;
+}*/
+#routeproduct .order-usernamephone{
+	margin-left: 15px;
+}
+#routeproduct .order-add{
+	margin-left:240px;
+	margin-top: 10px;
+}
+#finace-middle{
+	width:940px;
+	height:45px;
+	background: #eee;
+	margin-top: 5px;
+	border-radius: 4px;
+	padding-top:10px;
+}
+#finace-middle .finace-order{
+	margin-left: 15px;
+	display: inline-block;
+}
+.finace-select{
+	margin-left:20px;
+	display: inline-block;
+}
+.finace-order-select{
+	display: inline-block;
+	width:15px;
+	height:15px;
+}
+.order-export{
+	margin-left:480px;
+}
+.order-pay{
+	width:65px;
+	margin-left: 15px;
+}
+
+/*表格thead无背景*/
+#routeproduct .table-routeproduct .routeproduct-inquire-thead{
+	background-color: transparent;
+}
+/*背景*/
+

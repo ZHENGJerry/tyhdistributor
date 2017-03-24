@@ -1,0 +1,232 @@
+@charset "utf-8";
+
+body{
+	font-size:14px;
+	font-family:'hiragino sans gb','PingFangSC-Medium','微软雅黑';
+}
+#routeproduct .form-group .form-width{
+	width:125px;
+}
+.btn{
+	padding:2px 6px;
+}
+.btn-primary,.btn-primary:visited,.btn-primary:hover,.btn-primary:focus{
+	background: #0ab2cc!important;
+	border-color:#0ab2cc!important;
+}
+#routeproduct-title{
+	margin:0 auto;
+	width:940px;
+	text-align: center;
+	position: relative;
+}
+#routeproduct-title h1{
+	font-size:24px;
+	margin:10px 0;
+	/*color:red;*/
+}
+#routeproduct-title .routeproduct-normal{
+	position: absolute;
+	left:780px;
+	top:8px;
+	background: #f00;
+	border-color: transparent;
+}
+#routeproduct-title .routeproduct-warehouse{
+	position: absolute;
+	left:840px;
+	top:8px;
+}
+#routeproduct{
+	width:940px;
+	height:500px;
+	margin:0 auto;
+}
+#routeproduct .table-routeproduct {
+	margin:2px 0 0 0;
+}
+#routeproduct .table-routeproduct caption{
+	width:100%;
+	height:35px;
+	background: #E8E8E8;
+	position: relative;
+	text-align: center;
+	padding:0;
+	border-radius: 4px;
+    box-shadow: 0 2px 2px #ccc;
+}
+#routeproduct .table-routeproduct caption h3{
+	height:35px;
+	line-height:35px;
+	color:#000;
+	font-weight: bold;
+	letter-spacing:1.5px;
+	font-size:15px;
+}
+#routeproduct .table-routeproduct caption .routeproduct-export{
+	position: absolute;
+	top:5px;
+	right: 15px;
+    padding: 2px 4px;
+}
+#routeproduct .table-routeproduct thead{
+	border-top:2px solid #e7e7e7;
+	background: #E8E8E8;
+}
+#routeproduct .table-routeproduct tbody{
+	border-bottom:2px solid #e7e7e7;
+}
+#routeproduct .table-routeproduct thead tr th,
+#routeproduct .table-routeproduct tbody tr td,
+#routeproduct .table-routeproduct tbody tr td input{
+	text-align: center;
+	vertical-align:middle;
+}#routeproduct .table-routeproduct tbody tr td{
+	height:50px;
+}
+#routeproduct .table-routeproduct .routeproduct-serial{
+	width:70px;
+}
+#routeproduct .table-routeproduct .routeproduct-num{
+	width:145px;
+}
+#routeproduct .table-routeproduct .routeproduct-product{
+	width:380px;
+}
+/*产品审核界面*/
+#routeproduct .table-routeproduct .routeproduct-audit{
+	width:430px;
+}
+#routeproduct .table-routeproduct .routeproduct-validate{
+	width:120px;
+}
+#routeproduct .table-routeproduct .routeproduct-state{
+	width:80px;
+}
+#routeproduct .table-routeproduct .routeproduct-detail{
+	width:70px;
+}
+#routeproduct .table-routeproduct .routeproduct-opreating{
+	width:115px;
+}
+#routeproduct .table-routeproduct .routeproduct-opreating .routeproduct-opreating-modfiy{
+	display: inline-block;
+    margin-top: 5px;
+    height: 20px;
+    width: 20px;
+    background: url('../img/修改.png') no-repeat 2px -2px;
+    text-indent: -9999px;
+}
+#routeproduct .table-routeproduct .routeproduct-opreating .routeproduct-opreating-off{
+	display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-top: 5px;
+    margin-left: 10px;
+    background: url('../img/下架.png') no-repeat 0 -3px;
+    text-indent: -9999px;
+}
+#routeproduct .table-routeproduct .routeproduct-opreating .routeproduct-opreating-delete{
+	display: inline-block;
+	height:25px;
+	width:25px;
+	margin-top:5px;
+	margin-left: 10px;
+	background: url('../img/删除.png') no-repeat 0 -2px;
+	text-indent:-9999px;
+}
+
+/*inquire.html的样式*/
+.input-group-addon{
+	padding:6px;
+	font-size:13px;
+}
+#routeproduct .routeproduct-top{
+	width:940px;
+	height:90px;
+	background: #F2F4F5;
+	border-radius:4px;
+}
+#routeproduct .routeproduct-top .routeproduct-inquire{
+	width:100px;
+	height:90px;
+	text-align: center;
+	line-height:90px;
+	float:left;
+}
+#routeproduct .routeproduct-top .form-inquire{
+	width:740px;
+	height:90px;
+	float:left;
+}
+#routeproduct .routeproduct-top .routeproduct-inquery-btn{
+	width:100px;
+	height:90px;
+	float:left;
+	text-align: center;
+	line-height:90px;
+}
+#routeproduct .routeproduct-top .form-inquire .form-group{
+	margin:10px 15px 0 0;
+}
+#routeproduct .routeproduct-top .form-inquire .input-product{
+	width:180px;
+}
+#routeproduct .routeproduct-top .form-inquire .input-state{
+	border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+#routeproduct .routeproduct-top .form-inquire .input-select .btn{
+    background: #eee;
+    width:107px;
+}	
+#routeproduct .routeproduct-top .form-inquire .input-select .btn{
+	border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+	padding:6px;
+}
+#routeproduct .routeproduct-top .form-inquire .input-select .dropdown-deal{
+	min-width:120px;
+}
+#routeproduct .routeproduct-top .form-inquire .form-control-time{
+	width:111px;
+	border-bottom-right-radius: 4px;
+	border-top-right-radius: 4px;
+}
+#routeproduct .routeproduct-top .form-inquire .routeproduct-time{
+	position: relative;
+}
+#routeproduct .routeproduct-top .form-inquire .routeproduct-line{
+	position: absolute;
+	top:5px;
+	left:177px;
+}
+#routeproduct .routeproduct-top .form-inquire .form-control-to-time{
+	border-radius: 4px;
+	margin-left:15px;
+}
+#routeproduct .routeproduct-top .form-inquire .routeproduct-order{
+	width:68px;
+}
+#routeproduct .routeproduct-top .form-inquire .input-order{
+	width:180px;
+}
+#routeproduct .routeproduct-top .form-inquire .input-phone{
+	width:176px;
+}
+#routeproduct .table-routeproduct .routeproduct-product-inquire{
+	width:580px;
+}
+#routeproduct .table-inquery .routeproduct-inquire-product{
+	
+}
+#routeproduct .table-inquery .routeproduct-inquire-name{
+	
+}
+/*表格thead无背景*/
+#routeproduct .table-routeproduct .routeproduct-inquire-thead{
+	background-color: transparent;
+}
+
+
+/*addOrder.html的样式*/

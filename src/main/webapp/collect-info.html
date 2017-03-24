@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>信息审核</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/ticketUp.css">
+</head>
+<body>
+	<div id="info">
+		<table class="table table-bordered info-intro">
+	      	<thead>
+	       		<tr>
+		         	<th>序号</th>
+		          	<th colspan="4">个人信息</th>
+		          	<th class="info-role">角色</th>
+		          	<th class="info-audit">审核情况</th>
+	        	</tr>
+	      	</thead>
+	      	<tbody>
+		        <tr class="info-color">
+					<td rowspan="6" class="info-middle">1</td>
+					<td>手机号</td>
+					<td>1838888888</td>
+					<td>邮箱</td>
+					<td>aaa@163.com</td>
+					<td rowspan="6" class="info-middle">
+						<select name="" id="">
+							<option value="路线供应商">路线供应商</option>
+							<option value="酒店供应商">酒店供应商</option>
+							<option value="景区门票供应商">景区门票供应商</option>
+							<option value="车辆供应商">车辆供应商</option>
+							<option value="保险供应商">保险供应商</option>
+							<option value="机票火车票供应商">机票火车票供应商</option>
+							<option value="签证供应商">签证供应商</option>
+						</select>
+					</td>
+					<td rowspan="6" class="info-middle">
+						<button class="btn btn-primary btn-pass">审核通过</button>
+						<br>
+						<button class="btn btn-primary btn-not-pass">不审核通过</button>
+					</td>
+		        </tr>
+		        <tr>
+					<td>注册地点</td>
+					<td></td>
+					<td>详细地址</td>
+					<td></td>
+		        </tr>
+		        <tr>
+					<td>座机电话</td>
+					<td></td>
+					<td>业务人手机号码</td>
+					<td></td>
+		        </tr>
+		        <tr>
+					<td>管理员姓名</td>
+					<td></td>
+					<td>管理员手机号码</td>
+					<td></td>
+		        </tr>
+		        <tr>
+					<td>银行账户名称</td>
+					<td></td>
+					<td>银行卡号</td>
+					<td></td>
+		        </tr>
+		        <tr>
+					<td>开户行名称</td>
+					<td></td>
+					<td>支付宝信息</td>
+					<td></td>
+		        </tr>
+	      	</tbody>
+	    </table>
+	</div>
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/json2.js"></script>
+	<script type="text/javascript" src="js/collect_info.js"></script>
+</body>
+</html>

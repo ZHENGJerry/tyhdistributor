@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>产品管理</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/productMagage.css">
+</head>
+<body>
+	<div id="routeproduct-title">
+		<h1>产品管理</h1>
+	</div>
+
+	<div id="routeproduct">
+		<div class="routeproduct-top">
+			<form class="form-inline" role="form">
+				<div class="btn-group finace" role="group">
+				    <button type="button" class="btn btn-default finace-income">产品状态</button>
+				    <div class="btn-group" role="group">
+				        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:100px;">
+				       		<span class="product-statue-click">全部</span><span class="caret"></span>
+					    </button>
+					    <ul class="dropdown-menu product-statue">
+					        <li><a>全部</a></li>
+					        <li><a>正常运行</a></li>
+					        <li><a>仓库存放</a></li>
+					    </ul>
+					</div>
+				</div>
+				<div class="form-group finace" style="margin-left: 50px;">
+				    <div class="input-group routeproduct-time">
+				      	<div class="input-group-addon">产品编号</div>
+				        <input class="form-control form-width form-control-time form-control-from-time" placeholder="请输入产品编号" type="text">
+				    </div>
+				</div>
+				<button type="button" class="btn btn-primary finace-search">查询</button>
+			</form>
+		</div>
+		
+		<div id="finace-middle">
+			<div class="finace-select">
+				<input type="checkbox" class="finace-order-select" style="position: relative;top:2px;">&nbsp;&nbsp;选择全部
+			</div>
+			<p class="finace-order">共计有&nbsp;&nbsp;&nbsp;<span>120</span>&nbsp;&nbsp;&nbsp;个产品</p>
+		</div>
+		
+		<table class="table table-hover table-routeproduct table-inquery" id="table" style="table-layout:fixed">
+			<caption>
+				<h3>查询结果</h3>
+			</caption>
+	      	<thead class="routeproduct-inquire-thead">
+		        <tr>
+		            <th class="manage-num">序号</th>
+		            <th class="manage-username">客户名称</th>
+		            <th class="manage-time">有效期</th>
+		            <th class="manage-serilize">产品编号</th>
+		            <th class="manage-statue">产品状态</th>
+		            <th class="manage-tail">产品详情</th>
+		            <th class="manage-opera">操作</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		        <tr>
+		          	<td class="manage-num arial-sans"><label class="finace-xuhao"><input type="checkbox" class="finace-xh-select">&nbsp;001</label></td>
+		         	<td class="manage-username arial-sans">天津至云南豪华精品双飞五晚七日激情蜜月高富帅</td>
+		         	<td class="manage-time">2017-01-01</td>
+		          	<td class="manage-serilize arial-sans">120104112113</td>
+		          	<td class="manage-statue">正常运行</td>
+		          	<td class="manage-tail"><button type="button" class="btn btn-primary">产品详情</button></td>
+		          	<td class="manage-opera">
+		          		<div class="btn-group" role="group">
+					        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:100px;">
+					       		<span class="finace-income-state-click">操作</span><span class="caret"></span>
+						    </button>
+						    <ul class="dropdown-menu finace-income-state" style="min-width:80px;">
+						        <li><a>修改此产品</a></li>
+						        <li><a>下架此产品</a></li>
+						        <li><a>上架此产品</a></li>
+						        <li><a>删除此产品</a></li>
+						    </ul>
+						</div>
+		          	</td>
+		        </tr>
+	      	</tbody>
+	    </table>
+    </div>
+	
+	
+	
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>	
+	<script type="text/javascript" src="js/public.js"></script>
+	<script type="text/javascript" src="js/productManage.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商情发布-单团询价</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link href="css/datePicker.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/info_issue.css">
+</head>
+<body>
+	<!--顶部导航-->
+	<header class="index-header">
+		<div class="header-top">
+			<div class="location-container">
+				<a href=""><img src="img/dingwei.png"></a>
+                <span class="location-name"></span>
+			</div>
+			<span>欢迎来到同游会！</span>
+			<ul class="top-links">
+				<li>唐洪川<a href="#"><img src="img/show.png" alt="我的信息"></a></li>
+				<li><a href="#"><img src="img/home.png" alt="返回主页"></a></li>
+				<li><a href="#"><img src="img/exit.png" alt="退出登录"></a></li>
+			</ul>
+		</div>
+		<div class="header-main">
+			<img src="">
+			<div class="website">
+				<span><em>同游会职能旅游平台</em><br>
+				<em>www.ctripfair.com</em></span>
+			    
+			</div>
+			<div class="search-container">
+				<img src="img/search.png">
+				<input type="text" name="">
+			</div>
+		</div>
+		<div class="header-nav">
+			<ul class="nav-ul">
+				<li class="nav-li"><a href="">旅游路线</a></li>
+				<li class="nav-li"><a href="">景区门票</a></li>
+				<li class="nav-li"><a href="">酒店/客栈</a></li>
+				<li class="nav-li"><a href="">交通服务</a></li>
+				<li class="nav-li"><a href="">导游/领队</a></li>
+				<li class="nav-li"><a href="">游轮</a></li>
+				<li class="nav-li"><a href="">签证</a></li>
+				<li class="nav-li"><a href="">保险</a></li>
+				<li class="nav-li"><a href="">更多</a></li>
+			</ul>
+		</div>
+	</header>
+	<section id="sec-wrap">
+		<div class="flow-container">
+			<div class="pro-info">
+				<div class="pro-info-title">
+					<h5>单团询价</h5>
+				</div>
+				<div class="pro-info-detail">
+					<form action="">
+						<div class="main-list">
+							<ul class="main-list-item">
+								<li>
+									<span>交通方式：</span>
+									<span>
+										<label><input type="radio" name="traffic">旅游巴士</label>
+									</span>
+									<span>
+										<label><input type="radio" name="traffic">飞机</label>
+									</span>
+									<span>
+										<label><input type="radio" name="traffic" checked>火车</label>
+									</span>
+									<span>
+										<label><input type="radio" name="traffic">轮船</label>
+									</span>
+									<span>
+										<label><input type="radio" name="traffic">不用安排</label>
+									</span>
+								</li>
+								<li>
+									<span>住宿标准：</span>
+									<span>
+										<label><input type="radio" name="radio">经济型</label>
+									</span>
+									<span>
+										<label><input type="radio" name="radio">三星级</label>
+									</span>
+									<span>
+										<label><input type="radio" name="radio" checked>四星级</label>
+									</span>
+									<span>
+										<label><input type="radio" name="radio">五星级</label>
+									</span>
+									<span>
+										<label><input type="radio" name="radio">不用安排</label>
+									</span>
+								</li>
+								<li>
+									<span>用餐标准：</span>
+									<span>
+										<label><input type="radio" name="eat" checked>20-30元/人/餐</label>
+									</span>
+									<span>
+										<label><input type="radio" name="eat">30-40元/人/餐</label>
+									</span>
+									<span>
+										<label><input type="radio" name="eat">40-50元/人/餐</label>
+									</span>
+									<span>
+										<label><input type="radio" name="eat">50元以上/人/餐</label>
+									</span>
+									<span>
+										<label><input type="radio" name="eat">不用安排</label>
+									</span>
+								</li>
+								<li>
+									<span>是否需要：</span>
+									<span>
+										<label><input type="radio" name="need">导游</label>
+									</span>
+									<span>
+										<label><input type="radio" name="need" checked>领队</label>
+									</span>
+									<span>
+										<label><input type="radio" name="need">购物</label>
+									</span>
+									<span>
+										<label><input type="radio" name="need">会议安排</label>
+									</span>
+									<span>
+										<label><input type="radio" name="need">不用安排</label>
+									</span>
+							</ul>
+						</div>
+						<div class="main-list">
+							<ul class="main-list-item">
+								<li>
+									<span>出行天数：</span>
+									<input type="text">天
+								</li>
+								<li>
+									<span>出发地：</span>
+									<span data-toggle="distpicker" id="select-city">
+										<select></select>
+										<select></select>
+									</span>
+								</li>
+								<li class="main-item-loc">
+									<span>目的地：</span>
+									<select name="" id="">
+										<option value="">出境游</option>
+										<option value="">国内游</option>
+										<option value="">国外游</option>
+									</select>
+									<input type="text" placeholder="请填写具体目的地">
+								</li>
+								<li>
+									<span>出游日期：</span>
+									<input type="text" class="datepicker">
+									<span>
+										<input type="checkbox" id="ck-old" class="ck" checked>
+										<label for="ck-old"></label>有老人
+									</span>
+									<span>
+										<input type="checkbox" id="ck-child" class="ck" checked>
+										<label for="ck-child"></label>有儿童
+									</span>
+								</li>
+								<li>
+									<span>出行人数：</span>
+									<input type="text">人
+								</li>
+								<li>
+									<span>出行预算：</span>
+									<input type="text">元
+								</li>
+								<li>
+									<span>出行需求：</span>
+									<textarea name="" id="" cols="30" rows="10"></textarea>
+								</li>
+							</ul>
+						</div>
+						<div class="main-list">
+							<ul class="main-list-item">
+								<li>
+									<span>联系人：</span>
+									<input type="text">
+								</li>
+								<li>
+									<span>出游需求：</span>
+									<input type="text">
+								</li>
+								<li>
+									<span></span>
+									<input type="button" value="确认提交">
+								</li>
+							</ul>
+						</div>		
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>			
+
+
+	<!--底部菜单部分-->
+	<footer id="foot">
+		<div id="foot-logo">
+			<img src="" alt="">
+		</div>
+		<div id="foot-menu">
+			<ul>
+				<li><a href="">公司简介</a></li>
+				<li><a href="">商务合作</a></li>
+				<li><a href="">服务条款</a></li>
+				<li><a href="">加入我们</a></li>
+				<li><a href="">练习我们</a></li>
+				<li><a href="">微信公众平台</a></li>
+				<li><a href="">小程序</a></li>
+			</ul>
+			<p id="foot-right"><span>Copyright @2016 www.lvmama.com 天津市同游会科技有限公司 津ICP备16007815号-1</span></p>
+		</div>
+	</footer>
+
+
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/public.js"></script>
+	<script src="js/distpicker.data.js"></script>
+	<script src="js/distpicker.js"></script>
+	<script type="text/javascript" src="js/jquery.date_input.pack.js"></script>
+	<script type="text/javascript" src="js/info_issue.js"></script>
+</body>
+</html>

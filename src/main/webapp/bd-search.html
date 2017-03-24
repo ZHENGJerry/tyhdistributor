@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>保单查询</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/bd-search.css">
+</head>
+<body>
+	<div class="main-wrap">
+		<h1>保单查询</h1>
+		<div class="main-con">
+			<div class="pro-title">
+				<div>
+					<label for="">产品名称</label>
+					<select name="" id="">
+						<option value="">全部</option>
+						<option value="">境内个人旅游意外险</option>
+						<option value="">境外个人旅游意外险</option>
+					</select>
+					<label for="">保单状态</label>
+					<select name="" id="">
+						<option value="">全部</option>
+						<option value="">已处理</option>
+						<option value="">未处理</option>
+					</select>
+					<label for="">保险保单号</label>
+					<input type="text" placeholder="请输入保险保单号" class="bd-num">
+					<label for="">订单号</label>
+					<input type="text" placeholder="请输入保险订单号" class="dd-num">
+				</div>
+				<div>
+					<label for="">下单时间</label>
+					<input type="text">
+					<label for="">保单生效期</label>
+					<input type="text">
+				</div>
+				<div>
+					<label for="">联系电话</label>
+					<input type="text">
+					<label for="">被保险人证件号码</label>
+					<select name="" id="">
+						<option value="">身份证</option>
+						<option value="">护照</option>
+						<option value="">军官证</option>
+					</select>
+					<input type="text">
+				</div>
+
+				<input type="button" value="查询" class="pro-t-search">
+			</div>
+			<div class="pro-num">
+				<span>共计有<span>10</span>个保险订单</span>
+				<input type="checkbox" class="sel-all"><label for="">选择全部</label>
+				<div class="pro-num-btn">
+					<input type="button" value="导出为Excel表格">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

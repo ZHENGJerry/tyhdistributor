@@ -1,0 +1,29 @@
+
+/*产品状态*/
+.pro-title select{
+	width: 90px;
+}
+
+
+
+.pro-p-index{
+	width: 10%;
+}
+.pro-p-name{
+	width: 22%;
+}
+.pro-p-num{
+	width: 14%;
+}
+.pro-p-stat{
+	width: 14%;
+}
+.pro-p-info{
+	width: 14%;
+}
+.pro-p-opa{
+	width: 26%;
+}
+.pro-p-stat input{
+	padding: 0 10px;
+}

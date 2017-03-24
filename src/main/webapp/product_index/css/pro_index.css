@@ -1,0 +1,406 @@
+/*header部分开始*/
+/*图标颜色：#8b8b8b*/
+*{
+	font-family: MicrosoftYaHei;
+}
+body{
+	background: url("../img/senery.png");
+	overflow-x: hidden;
+}
+.index-header{
+	width: 100%;
+}
+.header-top div,.header-top ul,.header-top li{
+	display: inline-block;
+}
+.header-top{
+	width: 100%;
+	height: 26px;
+	font-size: 12px;
+	line-height: 26px;
+	margin: 0 auto;
+	padding: 0 141px 0 171px;
+	box-sizing: border-box;
+	color: #666666;
+	background-color: #F6F6F6;
+	opacity: 0.8;
+}
+.header-top .location-container{
+	min-width: 54px;
+}
+.header-top .location-container a{
+	width: 12px;
+	height: 26px;
+	line-height: 26px;
+}
+.header-top>span{
+	margin-left: 30px;
+}
+.header-top .location-container a img{
+	margin-bottom: -3px;
+}
+.top-links{
+	float: right;
+}
+.top-links li{
+	margin-left: 40px;
+}
+.top-links li img{
+	vertical-align: middle;
+}
+.header-main{
+	position: relative;
+	width: 1245px;
+	margin: 0 auto;
+}
+.header-main div{
+	display: inline-block;
+}
+.header-main>img{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	margin-left: 50px;
+}
+.header-main .website{
+	height: 100px;
+	margin-left: 160px;
+}
+.header-main .website>span{
+	display: block;
+	
+	padding: 30px 0;
+}
+.header-main .website em:first-child{
+	font-size: 18px;
+	line-height: 25px;
+	font-family: PingFangSC-Regular;
+	color: #D82585;
+	font-weight: 600;
+}
+.header-main .website em:last-child{
+	font-family: PingFangSC-Regular;
+    font-size: 10px;
+    color: #333333;
+}
+.header-main .search-container{
+	height: 40px;
+	width: 459px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -229.5px;
+	margin-top: -20px;
+	background: url("../img/Group.png");
+	padding: 10px;
+	box-sizing: border-box;
+}
+.header-main .search-container img{
+	vertical-align:middle;
+	margin-bottom: 3px;
+}
+.header-main .search-container input{
+	height: 20px;
+	width: 313px;
+	display: inline-block;
+	border:none ;
+	vertical-align:middle;
+	outline: none;/* 去掉点击时的外边框 */
+}
+.header-main .search-container span{
+	display: inline-block;
+	background-color: red;
+}
+.header-main .search-container a{
+	
+	color: #fff;
+	line-height: 36px;
+}
+.header-nav{
+	width: 100%;
+	background: #4C4C4C;
+	/*text-align: center;不知道为啥不能使ul居中*/
+}
+
+.header-nav ul{
+	width: 1245px;
+	height: 50px;
+	cursor:pointer;
+	margin: 0 auto;
+	/*border: 1px solid #fff;*/
+}
+.header-nav ul li{
+	display: inline-block;
+	margin: 0 36px;
+	
+}
+.header-nav ul a{
+	text-decoration: none;
+	color: #fff;
+	line-height: 50px;
+	font-size: 18px;
+
+}
+/*header部分结束*/
+/*瀑布流部分*/
+.flow-container{
+	width: 1245px;
+	margin: 0 auto;
+	/*border: 1px solid black;*/
+}
+.flow-container:after{
+	content: "";
+	display: table;
+	clear:both;
+}
+.flow-left,.flow-right{
+	width: 260px;
+	border: 1px solid #797979;
+}
+.flow-left{
+	float: left;
+}
+.flow-right{
+	float: right;
+}
+.flow-middle{
+	width: 707px;
+	margin-left: 269px;
+	margin-right: 269px;
+}
+.flow-left .flow-head,.flow-right .flow-head{
+	height: 50px;
+	box-sizing: border-box;
+	border-left: 4px solid #D82585;
+    opacity: 0.8;
+    filter:Alpha(opacity=80);
+}
+.flow-head img{
+	margin: 10px 11px 9px 20px;
+}
+.flow-head span{
+	display: inline-block;
+	height: 50px;
+	vertical-align: middle;
+	color: #d82585;
+}
+.flow-middle .flow-head{
+	height: 50px;
+	box-sizing: border-box;
+	border-bottom: 2px solid #4C4C4C;
+}
+.cell{
+	filter:Alpha(opacity=80);
+	opacity: 0.8;
+    padding: 16px 13px 0 23px;
+    transition: height 2s;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    margin-bottom: 10px;
+}
+.flow-left .cell,.flow-right .cell{
+	height: 214px;
+    
+}
+.cell:hover{
+
+}
+.cell-more+.cell{
+	 margin-top: 7px;
+}
+.cell-head{
+	padding-bottom: 8px;
+	font-family: MicrosoftYaHei-Bold;
+	position: relative;
+	box-sizing: border-box;
+	border-bottom: 2px solid #d82585;
+    
+}
+.cell-head img{
+	vertical-align: middle;
+}
+.cell-head .cell-type{
+	font-weight: 700;
+	font-size: 16px;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+.cell-head .more{
+	font-size: 12px;
+	position: absolute;
+	bottom: 8px;
+	right: 0;
+}
+.cell-ul .cell-li{
+	box-sizing: border-box;
+	padding: 7px 0;
+	height: 56px;
+	border-bottom: 1px solid #797979;
+}
+.cell-ul  .cell-li+ .cell-li{
+	/*border-top: 1px solid #BBBBBB;*/
+}
+.cell-ul .cell-li h6{
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+.cell-ul .cell-li span{
+	font-size: 12px;
+	line-height: 16px;
+}
+.cell-ul .cell-li span em{
+	color: #D82585;
+	margin-left: 3px;
+	font-size: 16px;
+	font-weight: 600;
+	color: #D82585;
+}
+.cell-more{
+/*	width: 80px;
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    margin-left: -40px;*/
+    font-size: 12px;
+    text-align: center;
+	opacity: 0.8;
+    line-height: 24px;
+    cursor: pointer;
+}
+.flow-middle .banner{
+	height: 170px;
+	border: 1px solid red;
+}
+.banner{
+	overflow: hidden;
+}
+.banner img{
+	width: 707px;
+	height: 170px;
+}
+.celPic-container{
+	text-align: center;
+}
+.cell-pic{
+	padding: 5px;
+	display: inline-block;
+	width: 328px;
+	box-sizing: border-box;
+	position: relative;
+	/*padding-bottom: 1000px;
+	margin-bottom: -1000px;*/
+	text-align: left;
+}
+.cell-pic img{
+	display: block;
+	width: 318px;
+}
+.cell-pic span{
+	font-size: 14px;
+}
+.cell-pic span em{
+	font-weight: 600;
+	color: #D82585;
+	font-size: 16px;
+
+}
+.cell-pic h6{
+	margin: 8px 0 4px 0;
+}
+.cell-pic .pro-date{
+	position: absolute;
+	right: 15px;
+    top: 192px;
+}
+.cell-pic .pro-residual{
+	position: absolute;
+	right: 15px;
+	bottom: 5px;
+}
+.cell-pic .pro-gentuan{
+    position: absolute;
+	right: 7px;
+    top: 2px;
+    width: 30px;
+    height: 58px;
+    background-image: url(../img/gentuan.png);
+}
+.cell-pic .pro-img{
+	position: relative;
+	color: #fff;
+}
+.cell-pic .pro-img-tittle{
+	position: absolute;
+	bottom: 5px;
+	left: 6px;
+	font-size: 12px;
+}
+.cell-pic .pro-img-num{
+	position: absolute;
+	bottom: 5px;
+	right: 6px;
+	font-size: 12px;
+}
+/*瀑布流部分结束*/
+/*侧边栏开始*/
+.sidebar{
+    position: absolute;
+    text-align: center;
+    width: 80px;
+    right: -80px;
+    top: 200px;
+}
+.sidebar li{
+	background-color: #dddddd;
+	vertical-align: middle;
+	padding: 24px 0 5px 0;
+	margin-top: 2px; 
+	box-sizing: border-box;
+}
+.sidebar li img{
+	display: block;
+	margin: 0 auto;
+	width: 32px;
+}
+.sidebar li span{
+	font-size: 12px;
+}
+.toggle{
+	position: absolute;
+	right: 80px;
+	top: 208px;
+	background-color: #dddddd;
+	padding: 5px;
+}
+/*侧边栏结束*/
+/*底部开始*/
+#foot{
+	width: 100%;
+	height: 120px;
+	background: #F6F6F6;
+	opacity: 0.8;
+	padding: 10px 100px;
+	display: flex;
+}
+#foot-logo{
+	width: 80px;
+	height: 80px;
+	border: 1px solid #000;
+	margin-right: 10px;
+}
+#foot-menu{
+	position: relative;
+}
+#foot-menu li{
+	margin-right: 60px;
+	float: left;
+}
+#foot-right{
+	text-align: center;
+	position: relative;
+	top: 40px;
+	font-size: 12px;
+}
+/*底部结束*/

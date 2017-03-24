@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加路线</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/jquery.datetimepicker.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/publicUp.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/ssi-uploader.min.css">
+	<link rel="stylesheet" href="css/routeUp.css">
+</head>
+<body>
+	<header class="text-center">
+	<h1>路线产品添加</h1>
+	</header>
+	<!-- 第一页 -->
+	<section class="basedInfo clearfix page1" >
+		<h3>基本信息</h3>
+		<!-- <div class="line-ver"></div> -->
+		<div class="basedInfo_container right form-inline">
+			<div class="type">
+				<label class="span_type">产品分类</label>
+				<input type="text" name="path_product_type" class="input_type form-control" readonly>
+				<span>
+					<span class="tag_types tag_select">出境组团</span>
+				    <span class="tag_types tag_select">出境自由行</span>
+				    <span class="tag_types tag_select">国内组团</span>
+				    <span class="tag_types tag_select">国内自由行</span>
+				    <span class="tag_types tag_select">周边游</span>
+				    <span class="tag_types tag_select">户外/亲自旅行</span>
+				    <span class="tag_types tag_select">邮轮</span>
+				    <span class="tag_types tag_select">滑雪</span>
+				</span>
+			</div>
+			<div class="name">
+				<label class="span_name">产品名称</label>
+				<input type="text" class="form-control input_name " name="path_product_name" placeholder="不超过20个字" maxlength="20" style="width: 350px;">
+			</div>
+			<div class="id">
+				<label class="span_id">产品编号</label>
+				<input type="text" disabled class="input_id form-control"  name="path_product_num">
+				<button href="javascript:;" class="add_id add_btn">获取产品编号</button>
+			</div>
+			<div class="brief_intro">
+				<label class="span_briefIntro">产品简介</label>
+				<input type="text" class="input_briefIntro form-control" name="path_product_intro" placeholder="不超过50个字" maxlength="50" style="width: 650px;">
+			</div>
+			<div class="terminal">
+				<label class="span_terminal">目的地</label>
+				<input type="text" class="input_terminal form-control" name="path_product_destination" style="width: 90px;">
+				<a href="#" class="admit_terminal add_btn" title="添加">确定</a>
+				<a href="#" class="add_terminal add_btn" title="添加" style="display: none">添加</a>
+			</div>
+			<div class="tag">
+				<label class="span_tag">标签</label>
+				<!-- <input type="text" class="input_tag form-control" name="path_product_label" style="width: 120px;"> -->
+				<span>
+					<span class="tag_tags tag_select">休闲</span>
+				    <span class="tag_tags tag_select">无自费</span>
+				    <span class="tag_tags tag_select">美食</span>
+				    <span class="tag_tags tag_select">人文</span>
+				    <span class="tag_tags tag_select">历史</span>
+				    <span class="tag_tags tag_select">蜜月</span>
+				    <span class="tag_tags tag_select">教育</span>
+				    <span class="tag_tags tag_select">亲子</span>
+				</span>
+			</div>
+			<div class="residual">
+				<label class="span_residual">余位设定</label>
+				<input type="number" class="input_residual form-control" name="path_product_residue" style="width: 160px;height:30px;">
+			</div>
+		</div>
+	</section>
+	<section class="routeUpinfo img_upload clearfix page1" >
+		<h3 style="margin-top: -63.5px;">上传宣传图</h3>
+		<div class="right form-inline">
+		    <span class="span_advice">建议尺寸：320px*320px，最多传1张</span>
+		    <div class="imgUpload_container" id="img-ssi-upload">
+		    	<div class="img-up" >
+			    	<input type="hidden" id="domain_1" value="http://pics.ctripfair.com/">
+			    	<input type="hidden" id="upkoen_url_1" value="/tyhcontrol/qnytoken">
+			    	<input type="file" id="ssi-upload" name="path_product_advertisingpicture">
+		    	</div>
+		    	<img class="ssi-upload-look"></img>  <!-- 图片预览 -->
+		    </div>
+		</div>
+	</section>
+	<section class="upProduct img_upload clearfix page1" >
+		<h3 style="margin-top: -63.5px;">上传产品图</h3>
+		<div class="right form-inline">
+		    <span class="span_advice">建议尺寸：320px*320px，最多传6张</span>
+		    <div class="imgUpload_container" id="imgUpload_container">
+		    	<div class="imgimg">
+		    		<div class="imgimg-top">
+		    			<img class="imgi img1" src="" alt="">
+		    		</div>
+		    		<div class="imgimg-bottom">
+		    			<input type="file" class="file-pic" id="file-pic-1" style="margin-top:5px; display: inline-block;">
+		    			<button class="img-btn" disabled  style="display:inline-block; margin-left: 18px;width:30px; background: #ccc;">添加</button>
+		    			<button class="img-btn-remove" disabled style="display:inline-block; width:30px;background: #ccc;">删除</button>
+		    		</div>
+		    	</div>
+		    </div>
+		</div>
+	</section>
+	<!-- <section class="img_upload clearfix page1" >
+		<h3 style="margin-top: -63.5px;">上传产品图</h3>
+		<div class="right form-inline">
+		选择上传模式：
+			<span class="tagSelect_active">文字+图片</span>
+		    <span class="tag_select">含宣传信息图片（暂未开放）</span>
+		    <span class="span_advice">建议尺寸：320px*320px，最多传6张</span>
+		    <div class="imgUpload_container">
+		    	<input type="file" id="ssi-upload3">
+		    </div>
+		</div>
+	</section> -->
+	<div class="btn_pages clearfix page1">
+	    <span>第1/3页</span>
+	    <a href="#head" class="btn_page btn_default  next_page2" id="toPage2">下一步</a>
+	    <span class="title-info" style="display:none;">您有未填写信息！</span> 
+	</div>
+    <!-- 第二页 -->
+	<section class="fatuan clearfix form-inline page2 head"  id="head" style="display: none;">
+		<h3>发团日期</h3>
+		<!-- <div class="line-ver"></div> -->
+		<table class="right tbl_fatuan comple_fatuan">
+			<tr>
+				<th class="head_times">时间类型</th>
+				<th class="head_times show_times">起止时间</th>
+                <th class="head_time show_days" style="display: none;width: 220px;" class="week_day" nowrap>
+                	有效期：
+                	<br>
+                	<!-- <input type="text" class="youxiao_begin form-control" name="calendar_begintime" style="width: 95px;margin-top:10px;" >
+                	-
+                	<input type="text" class="youxiao_end form-control" name="calendar_endtime" style="width: 95px;margin-top:10px;"> -->
+                </th>
+				<th class="head_times">出发城市</th>
+				<th class="head_times">市场价格</th>
+				<th class="head_times">外卖价格</th>
+				<th class="head_times">分销价格</th>
+				<th class="head_times">操作</th>
+			</tr>
+			<tr class="fatuan_tr">
+				<td class="timeType_select" rowspan="100">
+					<span class="times tag_select">日历时间</span>
+					<span class="days tag_select" >每周循环</span>
+				</td>
+				<td class="tuanqi_times  show_times" nowrap>
+					<input type="text" class="times_start form-control" name="cyclic_begintime" style="width: 95px;">
+					-
+					<input type="text" class="times_end form-control" name="cyclic_endtime" style="width: 95px;">
+				</td>
+				<td class="tuanqi_days  show_days" style="display: none">
+					<input type="text" class="youxiao_begin form-control" name="calendar_begintime" style="width: 95px;margin-top:5px;margin-left:3px;" >
+                	-
+                	<input type="text" class="youxiao_end form-control" name="calendar_endtime" style="width: 95px;margin-top:5px;margin-left:3px;">
+                	<br>
+				    <span class="week_day right">日</span>
+					<span class="week_meizhou right">每周</span>
+					<span class="week_day right">一</span>
+					<span class="week_day right">六</span>
+					<span class="week_day right">五</span>
+					<span class="week_day right">四</span>
+					<span class="week_day right">三</span>
+					<span class="week_day right">二</span>
+				</td>
+				<td class="">
+					<input type="text" class="start_city form-control" name="cyclic_city" style="width: 90px;">
+				</td>
+				<td class="marketPrice">
+				        <span>成人</span>
+					    <input type="text" class="marketPrice_ad form-control" name="cyclic_price_market_man" style="width: 80px;"><br>
+				        <span>儿童</span>
+					    <input type="text" class="marketPrice_ch form-control" name="cyclic_price_market_child" style="width: 80px;">
+					
+					
+				</td>
+				<td class="waimaiPrice">
+					<span>成人</span>
+					<input type="text" class="waimaiPrice_ad form-control" name="cyclic_price_takeout_man" style="width: 80px;"><br>
+					<span>儿童</span>
+					<input type="text" class="waimaiPrice_ch form-control" name="cyclic_price_takeout_child" style="width: 80px;">
+				</td>
+				<td class="fenxiaoPrice">
+					<span>成人</span>
+					<input type="text" class="fenxiaoPrice_ad form-control" name="cyclic_price_distrinutiom_man" style="width: 80px;"><br>
+					<span>儿童</span>
+					<input type="text" class="fenxiaoPrice_ch form-control" name="cyclic_price_distribution_child" style="width: 80px;">
+				</td>
+			    <td class="handle">
+			    	<a href="javascript:;" class="add_btn add_fatuan">添加</a><br><br>
+			    	<a href="javascript:;" class="add_btn del_tr delete_date" title="请至少填写一行信息">删除</a>
+			    </td>
+			</tr>
+		</table>
+	</section>
+	<section class="gather_Info clearfix page2" style="display: none;">
+		<h3 style="margin-top: -72px;">集合时间地点</h3>
+		<table class="comple_gather right">
+			<tr>
+				<th>集合时间</th>
+				<th>集合地点</th>
+				<th>操作</th>
+			</tr>
+			<tr class="gather_tr">
+				<td class="gather_time"><input type="text" class="gather-time" name="gather_time"></td>
+				<td class="gather_site"><input type="text" class="gather-place" name="gather_place"></td>
+				<td class="handle">
+					<a href="javascript:;" class="add_btn add_gather">添加</a>
+			    	<button  class="add_btn del_tr del_gather" title="请至少填写一行信息">删除</button>
+				</td>
+			</tr>
+
+		</table>
+	</section>
+	<section class="sec_schedule clearfix page2" style="display: none;">
+	    <h3>行程安排</h3>
+	    
+	    <table class="schedule right">
+		    <tr class="schedule_tr">
+		    	<td rowspan="6">
+		    		<h4>第<span class="schedule_day">1</span>天</h4>
+		    	</td>
+		    	<td>
+		    		<textarea name="scheduling_describe" class="scheduling-describe" cols="80" rows="5"></textarea>
+		    	</td>
+		    	<td rowspan="6" style="width:56px;">
+		    		<a href="javascript:;" class="add_btn add_schedule" style="display: block;" >添加</a>
+		            <a href="javascript:;" class="add_btn del_tbl" style="display: block">删除</a>
+		    	</td>
+		    </tr>
+		    <tr>
+		    	<td>
+		    	    <span class="span_advice product-img">建议尺寸：320px*320px，必传3张图片</span>
+		    	    <div class="imgimg-1">
+			    		<div class="imgimg-top-1">
+			    			<img class="imgg imgg-1" id="imgm-1-1" src="" alt="">
+			    		</div>
+			    		<div class="imgimg-bottom-1" style="overflow: hidden;">
+			    			<input type="file" class="file-picc file-picc-1 file-file" id="file-piccc-1-1" style="margin:5px auto;">
+			    		</div>
+			    	</div>
+			    	<div class="imgimg-1">
+			    		<div class="imgimg-top-1">
+			    			<img class="imgg imgg-2" id="imgm-1-2" src="" alt="">
+			    		</div>
+			    		<div class="imgimg-bottom-1" style="overflow: hidden;">
+			    			<input type="file" class="file-picc file-picc-2 file-file" id="file-piccc-1-2" style="margin:5px auto;">
+			    		</div>
+			    	</div>
+			    	<div class="imgimg-1">
+			    		<div class="imgimg-top-1">
+			    			<img class="imgg imgg-3" id="imgm-1-3" src="" alt="">
+			    		</div>
+			    		<div class="imgimg-bottom-1" style="overflow: hidden;">
+			    			<input type="file" class="file-picc file-picc-3 file-file" id="file-piccc-1-3" style="margin:5px auto;">
+			    		</div>
+			    	</div>
+		    		<!-- <div class="imgUpload_container ssi-upload4-img" id="ssi_container_1">
+			    	    <input type="file" class="ssi-upload4" id="ssi_img_1">
+			        </div>
+			        <img class="img-look"></img>  -->   <!-- 图片预览 -->
+		    	</td>
+		    </tr>
+		    <tr>
+		    	<td class="hotel">
+		    	    <span>住宿：</span>
+		    	    <input type="radio" name="scheduling_stay" value="无" checked />无 
+		    	    <input type="radio" name="scheduling_stay" value="普通酒店"/>普通酒店 
+	                <input type="radio" name="scheduling_stay" value="三星级" />三星级 
+	                <input type="radio" name="scheduling_stay" value="四星级" />四星级
+		    	    <input type="radio" name="scheduling_stay" value="五星级" />五星级
+		    	    <input type="radio" name="scheduling_stay" value="农家院" />农家院
+		    	</td>
+		    </tr>
+		    <tr class="form-inline">
+		    	<td>
+		    	    <span>酒店名称:</span>
+		    	    <input type="text" class="hotel_name form-control" name="scheduling_hotel" placeholder="请输入参考酒店名称" /> 
+		    	    <span>（或同级）</span>
+		    	</td>
+		    </tr>
+		    <tr>
+		    	<td class="food">
+		    	    <span>包餐:</span>
+		    	    <input type="checkbox" name="scheduling_eat" value="早餐" />早餐 
+	                <input type="checkbox" name="scheduling_eat" value="中餐" />中餐
+		    	    <input type="checkbox" name="scheduling_eat" value="晚餐" />晚餐
+		    	</td>
+		    </tr>
+	    </table>
+	</section>
+	<div class="btn_pages clearfix page2" style="display: none;">
+	    	<a href="#" class="btn_page btn_default  last_page1">上一步</a> 
+	    	<span>第2/3页</span>
+	        <a href="#head" class="btn_page btn_default  next_page3">下一步</a> 
+	        <span class="title-info2" style="display:none;">您有未填写信息！</span> 
+	</div>
+	<!-- 第三页 -->
+	<section class="route_feature clearfix page3 head" style="display: none;">
+		<h3>线路特色</h3>
+		<textarea class="right path-product-feature" name="path_product_feature" cols="30" rows="5"></textarea>
+	</section>
+	<section class="order_attention clearfix page3" style="display: none;">
+		<h3>预订须知</h3>
+		<textarea class="right path-product-notice" name="path_product_notice" ols="10" rows="5"></textarea>
+	</section>
+	<section class="attention clearfix page3" style="display: none;">
+		<h3>注意事项</h3>
+		<textarea class="right path-product-attention" name="path_product_attention" cols="30" rows="5"></textarea>
+	</section>
+    <footer class="page3" style="display: none;">
+        <a href="#" class="btn_page btn_default  last_page2">上一步</a>
+        <span>第3/3页</span>
+    	<!-- <a href="javascript:;" class="route_submit _submit" disabled>提交审核</a> -->
+    	<button class="route_submit _submit" >提交审核</button>
+    	<span class="title-info3" style="display:none;">您有未填写信息！</span>
+    </footer>
+
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>	
+    <script type="text/javascript" src="js/ssi-uploader.js"></script>
+    <script type="text/javascript" src="js/routeUp_AJAX.js"></script>
+    <script type="text/javascript" src="js/moxie.js"></script>
+    <script type="text/javascript" src="js/plupload.full.min.js"></script>
+    <script type="text/javascript" src="js/qiniu.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+	<script type="text/javascript" src="js/hanshu.js"></script>
+	<script type="text/javascript" src="js/publicUp.js"></script>
+	<script type="text/javascript" src="js/json2.js"></script>
+    <script type="text/javascript" src="js/submit-routeUp.js"></script>
+	<script type="text/javascript" src="js/routeUp.js"></script>
+    <script type="text/javascript">
+    	$('#ssi-upload3').ssi_uploader({url:'#',maxFileSize:6,dropZone:false,allowed:['jpg','gif','txt','png','pdf']});
+    </script>
+</body>
+</html>

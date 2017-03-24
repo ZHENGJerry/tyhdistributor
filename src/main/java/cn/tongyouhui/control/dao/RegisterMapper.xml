@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.tongyouhui.control.dao.RegisterMapper">
+	<!-- 插入基本数据 -->
+	<insert id="register_base_info" parameterType="cn.tongyouhui.control.vo.ControlRegister">
+		INSERT INTO login
+		(reg_username,reg_password,role1,role2,state,del) VALUES
+		(#{reg_username},#{reg_password},#{role1},#{role2},#{state},#{del})
+	</insert>
+	<!-- 插入企业数据 -->
+	<insert id="register_company_info" parameterType="cn.tongyouhui.control.vo.ControlRegister">
+		INSERT INTO
+		login_info_company
+		(reg_username,reg_company_name,company_address_nationwide,company_address_county,reg_company_address,reg_company_phone,reg_company_cellphone,reg_company_administrator_phone,reg_company_administrator_name,reg_company_bank,reg_company_bankcard,reg_company_bankcard_name,reg_company_alipay,reg_company_receive_message,create_date,role2,role1,state,reg_email,del,company_address_nationwide_num,company_address_county_num,num)
+		VALUES
+		(#{reg_username},#{reg_company_name},#{company_address_nationwide},#{company_address_county},#{reg_company_address},#{reg_company_phone},#{reg_company_cellphone},#{reg_company_administrator_phone},#{reg_company_administrator_name},#{reg_company_bank},#{reg_company_bankcard},#{reg_company_bankcard_name},#{reg_company_alipay},#{reg_company_receive_message},#{create_date},#{role2},#{role1},#{state},#{reg_email},#{del},#{company_address_nationwide_num},#{company_address_county_num},#{num})
+	</insert>
+	<!-- 插入个人数据 -->
+	<insert id="register_person_info" parameterType="cn.tongyouhui.control.vo.ControlRegister">
+		INSERT INTO
+		login_info_person
+		(reg_username,company_address_nationwide,company_address_county,reg_distributor_bank,reg_distributor_bankcard,reg_distributor_bankcard_name,reg_distributor_alipay,reg_distributor_receive_message,idcardselect,pass_file_img,create_date,reg_email,role1,role2,state,del,company_address_nationwide_num,company_address_county_num)
+		VALUES
+		(#{reg_username},#{company_address_nationwide},#{company_address_county},#{reg_distributor_bank},#{reg_distributor_bankcard},#{reg_distributor_bankcard_name},#{reg_distributor_alipay},#{reg_distributor_receive_message},#{idcardselect},#{pass_file_img},#{create_date},#{reg_email},#{role1},#{role2},#{state},#{del},#{company_address_nationwide_num},#{company_address_county_num})
+	</insert>
+	<!-- 根据用户名和密码查询用户 -->
+	<select id="login" parameterType="cn.tongyouhui.control.vo.LoginVo"
+		resultType="cn.tongyouhui.control.vo.LoginVo">
+		SELECT * FROM login WHERE reg_username=#{log_username} AND
+		reg_password=#{log_password} AND state=1 AND del=1
+	</select>
+	<!-- 根据id查询信息企业表 selectInfoByCompany -->
+	<select id="selectInfoByCompany" parameterType="string"
+		resultType="cn.tongyouhui.control.vo.ControlRegister">
+		SELECT * FROM login_info_company WHERE
+		reg_username=#{value} AND state=1 AND del=1
+	</select>
+	<!-- 根据id查询信息个人表 selectInfoByPerson -->
+	<select id="selectInfoByPerson" parameterType="string"
+		resultType="cn.tongyouhui.control.vo.ControlRegister">
+		SELECT * FROM login_info_person WHERE reg_username=#{value}
+		AND state=1 AND del=1
+	</select>
+	<!-- 查询当前所有供应商的个数 -->
+	<select id="getNumByType" resultType="int">
+		select count(*) from
+		login_info_company where role2='我是供应商'
+	</select>
+		<!-- 查询当前所有供应商的个数，当供应商为个人的情况 -->
+	<select id="getNumByTypePerson" resultType="int">
+		SELECT COUNT(*) FROM
+		login_info_person WHERE role2='个人分销商'
+	</select>
+	<!-- 根据当前用户名查看用户是否存在 -->
+	<select id="getUserByUsername" parameterType="string"
+		resultType="cn.tongyouhui.control.vo.LoginVo">
+		SELECT * FROM login WHERE reg_username=#{value} AND del=1
+	</select>
+
+</mapper>

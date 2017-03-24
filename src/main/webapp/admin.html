@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+	<div id="reg-login"> 
+		<section id="login-main">
+			<h1>登录</h1>
+			<h2>同游会</h2>
+			<p class="reg-login-text">让天下没有难做的旅游生意</p>
+
+			<!-- 登录界面 -->
+			<section class="login" style="display:block;">
+				<form class="login-main-right login-log login-info">
+					<input type="text" id="log-username" name="username" class="form-control login-input login-username" maxlength="11"  placeholder="手机号码" />
+					<input type="password" id="log-password" name="password" class="form-control login-input login-password" placeholder="密码" /><span class="login-password-show">显密</span>
+					<input type="text" id="log-validatenum" name="reg_validatenum" class="form-control login-input login-validate-num" maxlength="4" placeholder="请输入验证码" />
+				
+					<button class="btn btn-default login-main-cellphone" type="button" >获取验证码</button>
+					<button class="btn btn-default login-main-log login-in" type="button" disabled="disabled" id="loginButton">登  录</button>
+				</form>	
+			</section>
+		</section>
+
+	</div>
+	<script src="https://cdn.staticfile.org/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/fn.js"></script>
+	<script type="text/javascript" src="js/jquery-form.js"></script>
+	<script type="text/javascript" src="js/distpicker.data.js"></script>
+	<script type="text/javascript" src="js/distpicker.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery-validate.js"></script>
+	<script type="text/javascript" src="js/admin.js"></script>
+</body>
+</html>

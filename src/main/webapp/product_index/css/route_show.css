@@ -1,0 +1,195 @@
+/*旅游路线展示页面*/
+
+
+/*主色调#c7257d*/
+/*主题内容左边开始*/
+.flow-container .flow-left{
+	position: relative;
+	width: 260px;
+	border: 2px solid #54565a;
+	padding: 10px;
+}
+.flow-container .flow-l-title{
+	position: relative;
+	border-bottom: 2px solid #54565a;
+	padding-bottom: 10px;
+}
+.flow-l-title{
+	background: url(../img/chujing.png) no-repeat;
+	background-size: 25px 25px;
+	padding-left: 30px;
+}
+.flow-l-title span:nth-of-type(1){
+	font-size: 16px;
+	color: #c7257d;
+	position: relative;
+}
+.flow-l-title span:nth-of-type(2){
+	font-size: 10px;
+	position: absolute;
+	right: 0;
+	top: 6px;
+}
+
+.hot-trav{
+	position: relative;
+}
+.hot-trav a{
+	text-decoration: none;
+}
+.hot-title{
+	width: 50%;
+	text-align: center;
+	padding: 5px;
+	margin: 0 auto;
+	border-bottom: 2px solid #54565a;
+	color: #c7257d;
+}
+.hot-trav-divid{
+	width: 2px;
+	background: #54565a;
+	height: 170px;
+	position: absolute;
+	top: 25px;
+	left: 129px;
+}
+.hot-list{
+	text-align: center;
+	margin: 20px 0;
+	position: relative;
+	height: 185px;
+}
+.hot-list:after{
+	display: block;
+	clear: both;
+	content: "";
+}
+.hot-list h6{
+	color: #c7257d;
+	font-weight: normal;
+}
+.hot-list ul{
+	position: absolute;
+}
+.hot-list ul li{
+	margin-top: 15px; 
+	font-size: 14px;
+
+}
+.hot-list ul:nth-of-type(1){
+	text-align: right;
+	right: 150px;
+}
+.hot-list ul:nth-of-type(2){
+	position: absolute;
+	left: 125px;
+}
+.hot-list ul:nth-of-type(2) li{
+	width: 6px;
+	height: 6px;
+	background: #fff;
+	border-radius: 50%;
+	border: 2px solid #54565a;
+	margin: 22px 0 0;
+}
+.hot-list ul:nth-of-type(3){
+	text-align: left;
+	position: absolute;
+	left: 150px;
+}
+/*主题内容左边结束*/
+/*主题内容右边开始*/
+.flow-right{
+	box-sizing: border-box;
+	width: 950px;
+	padding: 10px;
+	margin-left: 10px;
+    background: rgba(255,255,255,0.8);
+}
+.flow-r-head{
+	height: 30px;
+	position: relative;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.flow-r-head:after{
+	display: block;
+	clear: both;
+	content: "";
+}
+.flow-r-head ul li{
+	float: left;
+	margin: 0 20px;
+	height: 30px;
+}
+.flow-r-head ul li:last-child{
+	position: absolute;
+	right: 0;
+}
+.flow-r-head ul li a{
+	color: #c7257d;
+	line-height: 30px;
+}
+.item-search{
+	position: relative;
+}
+.search-text{
+	position: absolute;
+	top: 2px;
+	left: 70px;
+	background: transparent;
+	width: 300px;
+	height: 24px;
+	border: 1px solid #b4b1b1;
+}
+.item-search .search-btn{
+	width: 62px;
+	height: 26px;
+	position: absolute;
+	top: 2px;
+	left: 310px;
+	background: #c7257d;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+.flow-r-cont{
+	border-top: 2px solid #54565a;
+}
+div[class^="right-con"]{
+	box-sizing: border-box;
+	width: 50%;
+	float: left;
+	padding: 5px;
+	height: 330px;
+	border-bottom: 1px solid #9c9794;
+}
+div[class^="right-con"]:nth-of-type(2n){
+	border-left: 1px solid #9c9794;
+}
+div[class^="right-con"] img{
+	width: 100%;
+	border: none;
+	height: 290px;
+}
+div[class^="right-info"]{
+	position: relative;
+}
+div[class^="right-info"]>div{
+	color: #c7257d;
+	height: 24px;
+}
+div[class^="right-info"]>div:nth-of-type(2){
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+div[class^="right-con"] .right-con-small{
+	height: 162.5px;
+	padding: 2px;
+	font-size: 13px;
+}
+div[class^="right-con"] .right-con-small img{
+	height: 130px;
+}
+/*主题内容右边结束*/

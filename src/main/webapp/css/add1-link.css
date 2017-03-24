@@ -1,0 +1,56 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	font-family:'hiragino sans gb','PingFangSC-Medium','微软雅黑';
+}
+.main-wrap{
+	width: 940px;
+	margin: 0 auto;
+	background: #f2f2f2;
+}
+table{
+	width: 100%;
+}
+h2{
+	text-align: center;
+	padding: 20px;
+}
+tr{
+	display: block;
+	border-top: 1px solid #797979;
+}
+td{
+	text-align: center;
+	padding: 10px;
+	padding-bottom: 0;
+}
+.col-1{
+	width: 200px;
+	border-right: 1px solid #797979;
+}
+.col-2{
+	text-align: left;
+}
+.col-2 span{
+	display: inline-block;
+	min-width: 80px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.col-2 span:nth-of-type(1),.col-2 span:nth-of-type(7){
+	width: 145px;
+}
+footer{
+	text-align: center;
+	border-top: 1px solid #797979;
+	padding: 15px 0;
+}
+footer input{
+	padding: 10px 0;
+	border: 1px solid #797979;
+	background: #fff;
+	border-radius: 5px;
+	width: 150px;
+}

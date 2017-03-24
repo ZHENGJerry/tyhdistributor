@@ -1,0 +1,47 @@
+.provider{
+	background: url(../img/gsi.png) no-repeat;
+	color: #c7257d;
+	background-size: 25px 25px;
+	margin: 10px 20px;
+	padding-left: 30px;
+	font-size: 18px;
+}
+.provider-info{
+	border: 1px solid #81898e;
+	background: rgba(255,255,255,0.8);
+}
+.main-list{
+	position: relative;
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+}
+.provider-choice{
+	border: 1px solid #81898e;
+	margin: 15px 0;
+	padding: 10px;
+	background: rgba(255,255,255,0.3);
+}
+.provider-choice:after{
+	clear: both;
+	display: block;
+	content:"";
+}
+.choice-title{
+	font-size: 18px;
+}
+.choice-detail li{
+	float: left;
+	margin: 10px 0;
+	margin-right: 30px;
+}
+.choice-detail li:nth-of-type(1) a{
+	color: #df4297;
+}
+.provider-info .main-list-pic img{
+	height: 130px;
+}
+.main-list-wrap{
+	border-top: 2px solid #2e3033;
+}
